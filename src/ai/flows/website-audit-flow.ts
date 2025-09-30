@@ -19,7 +19,7 @@ export type WebsiteAuditInput = z.infer<typeof WebsiteAuditInputSchema>;
 
 const WebsiteAuditOutputSchema = z.object({
   auditSummary: z.string().describe('A summary of the website audit.'),
-  personalizedTips: z.string().describe('Personalized tips for churn reduction.'),
+  personalizedTips: z.string().describe('Personalized tips for churn reduction as a numbered list.'),
 });
 export type WebsiteAuditOutput = z.infer<typeof WebsiteAuditOutputSchema>;
 
@@ -47,7 +47,9 @@ const prompt = ai.definePrompt({
 
   The "Audit Summary" should be a concise overview of the website's strengths and weaknesses in terms of customer retention.
 
-  The "Personalized Tips" should provide actionable recommendations for improving customer retention on the website.
+  The "Personalized Tips" should provide actionable recommendations for improving customer retention on the website. This should be a numbered list where each item is a clear, actionable step. For example:
+  1. Integrate compelling client testimonials...
+  2. Elevate the visibility and content of your blog...
 `,
 });
 
