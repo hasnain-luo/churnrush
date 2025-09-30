@@ -13,7 +13,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator';
 import { useToast } from '@/hooks/use-toast';
-import React, { useEffect, useState, useActionState } from 'react';
+import React, { useEffect, useActionState } from 'react';
 import { calculateChurnAction, type ChurnRateState } from '@/app/actions';
 import { LoadingButton } from './loading-button';
 import { ReportDisplay } from './report-display';
@@ -52,19 +52,20 @@ export default function ChurnRateCalculator() {
               placeholder="e.g., https://example.com"
               required
               type="url"
+              defaultValue={state.formData?.websiteUrl}
             />
           </div>
           <div className="space-y-2">
               <Label htmlFor="start">Customers at Start of Period</Label>
-              <Input id="start" name="start" placeholder="e.g., 1000" required type="number" min="0" />
+              <Input id="start" name="start" placeholder="e.g., 1000" required type="number" min="0" defaultValue={state.formData?.start} />
             </div>
             <div className="space-y-2">
               <Label htmlFor="new">New Customers Acquired</Label>
-              <Input id="new" name="new" placeholder="e.g., 100" required type="number" min="0" />
+              <Input id="new" name="new" placeholder="e.g., 100" required type="number" min="0" defaultValue={state.formData?.new} />
             </div>
             <div className="space-y-2">
               <Label htmlFor="end">Customers at End of Period</Label>
-              <Input id="end" name="end" placeholder="e.g., 950" required type="number" min="0" />
+              <Input id="end" name="end" placeholder="e.g., 950" required type="number" min="0" defaultValue={state.formData?.end} />
             </div>
         </CardContent>
         <CardFooter className="flex-col items-stretch space-y-4">

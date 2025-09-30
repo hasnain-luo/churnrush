@@ -28,6 +28,12 @@ export type ChurnRateState = {
   churnRate?: string;
   auditResult?: WebsiteAuditOutput;
   error?: string;
+  formData?: {
+    websiteUrl: string;
+    start: number;
+    new: number;
+    end: number;
+  };
 };
 
 export async function calculateChurnAction(
@@ -54,16 +60,18 @@ export async function calculateChurnAction(
     websiteUrl,
     intent,
   } = validatedFields.data;
+  
+  const currentFormData = { websiteUrl, start, new: newCustomers, end };
 
   if (start + newCustomers < end) {
-    return { error: 'Customers at end cannot be more than start + new.' };
+    return { error: 'Customers at end cannot be more than start + new.', formData: currentFormData };
   }
 
   const churnRateValue =
     start === 0 ? 0 : ((start + newCustomers - end) / start) * 100;
   const churnRate = churnRateValue.toFixed(2);
   
-  const baseState = { churnRate };
+  const baseState = { churnRate, formData: currentFormData };
 
   if (intent === 'audit') {
     try {
