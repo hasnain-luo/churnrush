@@ -1,6 +1,7 @@
+// This file is loaded by `genkit dev`.
 import { config } from 'dotenv';
 config();
 
-import '@/ai/flows/website-audit-flow.ts';
-import '@/ai/flows/ai-definition-flow.ts';
-import '@/ai/flows/churn-prediction-flow.ts';
+// The Genkit plugin for Next.js looks for a `src/ai/index.ts` file
+// to determine which flows to load.
+import './index';
