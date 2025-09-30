@@ -16,12 +16,12 @@ function parseContentToJSX(text: string): React.ReactNode[] {
   const flushList = () => {
     if (listItems.length > 0) {
       nodes.push(
-        <ol
+        <ul
           key={`list-${nodes.length}`}
-          className="list-decimal list-inside space-y-2 my-4 pl-2"
+          className="list-disc list-outside space-y-2 my-4 pl-6"
         >
           {listItems}
-        </ol>
+        </ul>
       );
       listItems = [];
     }
@@ -37,50 +37,57 @@ function parseContentToJSX(text: string): React.ReactNode[] {
       )
     );
   };
-
-  const lines = text.split('\n').filter(line => line.trim() !== '');
+  
+  const lines = text.split('\n');
 
   lines.forEach((line, index) => {
-    // Regular expression to match both numbered lists and section titles.
-    const titleMatch = line.match(/^(\d+\.\s+)?(.*?):(.*)/);
-    const genericListMatch = line.match(/^\s*\d+\.\s+(.*)/);
+    const key = `line-${index}`;
 
-    if (titleMatch) {
-        flushList();
-        const [, , titleText, restOfLine] = titleMatch;
+    if (line.trim() === '---') {
+      flushList();
+      nodes.push(<hr key={key} className="my-6 border-border" />);
+      return;
+    }
 
-        nodes.push(
-            <h4
-                key={`h4-${index}`}
-                className="font-headline font-semibold text-base mt-4 mb-2"
-            >
-                {titleText.trim()}
-            </h4>
-        );
-        if (restOfLine && restOfLine.trim()) {
-            nodes.push(
-                <p key={`p-${index}-cont`} className="leading-relaxed">
-                    {parseLine(restOfLine.trim(), `p-text-${index}`)}
-                </p>
-            );
-        }
-    } else if (genericListMatch) {
+    const headingMatch = line.match(/^(#+)\s+(.*)/);
+    if (headingMatch) {
+      flushList();
+      const level = headingMatch[1].length;
+      const content = parseLine(headingMatch[2], key);
+      const className = {
+        1: 'text-2xl font-headline font-bold mt-6 mb-4',
+        2: 'text-xl font-headline font-semibold mt-6 mb-4',
+        3: 'text-lg font-headline font-semibold mt-4 mb-2',
+        4: 'text-base font-headline font-semibold mt-4 mb-2',
+      }[level] || 'text-base font-headline font-semibold';
+      
+      const Tag = `h${Math.min(level, 6)}` as keyof JSX.IntrinsicElements;
+
+      nodes.push(<Tag key={key} className={className}>{content}</Tag>);
+      return;
+    }
+    
+    const listItemMatch = line.match(/^\s*[\-*]\s+(.*)/);
+    if (listItemMatch) {
       listItems.push(
         <li key={`li-${nodes.length}-${listItems.length}`}>
-          {parseLine(genericListMatch[1], `li-text-${listItems.length}`)}
+          {parseLine(listItemMatch[1], `li-text-${listItems.length}`)}
         </li>
       );
-    } else {
-      flushList();
-      nodes.push(
-        <p key={`p-${index}`} className="leading-relaxed">
-          {parseLine(line, `p-text-${index}`)}
-        </p>
-      );
+      return;
+    }
+
+    if(line.trim() !== '') {
+        flushList();
+        nodes.push(
+            <p key={`p-${index}`} className="leading-relaxed my-4">
+                {parseLine(line, `p-text-${index}`)}
+            </p>
+        );
     }
   });
 
-  flushList(); // Make sure to flush any remaining list items
+  flushList();
   return nodes;
 }
 
