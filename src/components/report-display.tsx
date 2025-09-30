@@ -38,40 +38,52 @@ function parseContentToJSX(text: string): React.ReactNode[] {
     );
   };
 
-  text.split('\n').forEach((line, index) => {
-    if (line.trim() === '') return;
+  const lines = text.split('\n').filter(line => line.trim() !== '');
 
-    const listMatch = line.match(/^\s*\d+\.\s+(.*)/);
-    if (listMatch) {
+  lines.forEach((line, index) => {
+    // Regular expression to match both numbered lists and section titles.
+    const titleMatch = line.match(/^(\d+\.\s+)?(.*?):(.*)/);
+    const genericListMatch = line.match(/^\s*\d+\.\s+(.*)/);
+
+    if (titleMatch) {
+        flushList();
+        const [, , titleText, restOfLine] = titleMatch;
+
+        nodes.push(
+            <h4
+                key={`h4-${index}`}
+                className="font-headline font-semibold text-base mt-4 mb-2"
+            >
+                {titleText.trim()}
+            </h4>
+        );
+        if (restOfLine && restOfLine.trim()) {
+            nodes.push(
+                <p key={`p-${index}-cont`} className="leading-relaxed">
+                    {parseLine(restOfLine.trim(), `p-text-${index}`)}
+                </p>
+            );
+        }
+    } else if (genericListMatch) {
       listItems.push(
         <li key={`li-${nodes.length}-${listItems.length}`}>
-          {parseLine(listMatch[1], `li-text-${listItems.length}`)}
+          {parseLine(genericListMatch[1], `li-text-${listItems.length}`)}
         </li>
       );
     } else {
       flushList();
-      if (line.trim().endsWith(':') && line.length < 80) {
-        nodes.push(
-          <h4
-            key={`h4-${index}`}
-            className="font-headline font-semibold text-base mt-4 mb-2"
-          >
-            {parseLine(line.replace(':', ''), `h4-text-${index}`)}
-          </h4>
-        );
-      } else {
-        nodes.push(
-          <p key={`p-${index}`} className="leading-relaxed">
-            {parseLine(line, `p-text-${index}`)}
-          </p>
-        );
-      }
+      nodes.push(
+        <p key={`p-${index}`} className="leading-relaxed">
+          {parseLine(line, `p-text-${index}`)}
+        </p>
+      );
     }
   });
 
-  flushList();
+  flushList(); // Make sure to flush any remaining list items
   return nodes;
 }
+
 
 export function ReportDisplay({ content }: ReportDisplayProps) {
   return (
