@@ -15,7 +15,7 @@ export default function Home() {
           <p className="mt-2 text-base md:text-lg text-white/90">
             Your smart churn analysis toolkit.
           </p>
-          <Button asChild variant="outline" className="mt-6 bg-white text-foreground hover:bg-white/90">
+          <Button asChild className="mt-6 bg-white text-foreground hover:bg-white/90">
             <Link href="#">
               How It Works <ArrowRight />
             </Link>
