@@ -48,7 +48,7 @@ export default function ChurnRiskCalculator() {
 
   const getProbabilityColor = (prob: number) => {
     if (prob > 0.7) return 'text-destructive';
-    if (prob > 0.4) return 'text-yellow-500'; // A generic yellow, as theme doesn't specify risk levels
+    if (prob > 0.4) return 'text-yellow-500';
     return 'text-green-600';
   };
 
@@ -56,7 +56,7 @@ export default function ChurnRiskCalculator() {
     <Card>
       <form key={formKey} action={formAction}>
         <CardHeader>
-          <CardTitle className="font-headline">
+          <CardTitle className="font-headline text-xl">
             Individual Churn-Risk Calculator
           </CardTitle>
           <CardDescription>
@@ -69,42 +69,42 @@ export default function ChurnRiskCalculator() {
             <Input
               id="risk-websiteUrl"
               name="websiteUrl"
-              placeholder="https://example.com"
+              placeholder="e.g., https://example.com"
               required
               type="url"
             />
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <Label htmlFor="daysSinceLastActivity">
-                Days Since Last Activity
-              </Label>
-              <Input
-                id="daysSinceLastActivity"
-                name="daysSinceLastActivity"
-                required
-                type="number"
-                min="0"
-              />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="supportTicketsLast30Days">
-                Support Tickets (30d)
-              </Label>
-              <Input
-                id="supportTicketsLast30Days"
-                name="supportTicketsLast30Days"
-                required
-                type="number"
-                min="0"
-              />
-            </div>
+          <div className="space-y-2">
+            <Label htmlFor="daysSinceLastActivity">
+              Days Since Last Activity
+            </Label>
+            <Input
+              id="daysSinceLastActivity"
+              name="daysSinceLastActivity"
+              required
+              type="number"
+              min="0"
+              placeholder="e.g., 30"
+            />
+          </div>
+          <div className="space-y-2">
+            <Label htmlFor="supportTicketsLast30Days">
+              Support Tickets (Last 30 Days)
+            </Label>
+            <Input
+              id="supportTicketsLast30Days"
+              name="supportTicketsLast30Days"
+              required
+              type="number"
+              min="0"
+              placeholder="e.g., 2"
+            />
           </div>
           <div className="space-y-2">
             <Label htmlFor="paymentStatus">Payment Status</Label>
             <Select name="paymentStatus" defaultValue="On-Time" required>
               <SelectTrigger id="paymentStatus">
-                <SelectValue placeholder="Select status" />
+                <SelectValue placeholder="Select payment status" />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="On-Time">On-Time</SelectItem>

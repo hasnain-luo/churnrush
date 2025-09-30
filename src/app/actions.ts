@@ -21,7 +21,7 @@ const churnRateSchema = z.object({
   new: z.coerce.number().int().min(0, 'Must be a positive number'),
   end: z.coerce.number().int().min(0, 'Must be a positive number'),
   websiteUrl: z.string().url('Please enter a valid URL'),
-  intent: z.enum(['calculate', 'audit']),
+  intent: z.enum(['calculate', 'audit']).optional(),
 });
 
 export type ChurnRateState = {
@@ -56,28 +56,26 @@ export async function calculateChurnAction(
     intent,
   } = validatedFields.data;
 
-  if (intent === 'calculate' && start + newCustomers < end) {
+  if (start + newCustomers < end) {
     return { error: 'Customers at end cannot be more than start + new.' };
   }
 
   const churnRateValue =
     start === 0 ? 0 : ((start + newCustomers - end) / start) * 100;
   const churnRate = churnRateValue.toFixed(2);
-
-  if (intent === 'calculate') {
-    return { churnRate };
-  }
+  
+  const baseState = { churnRate, formKey: Date.now() };
 
   if (intent === 'audit') {
     try {
       const auditResult = await websiteAudit({ websiteUrl });
-      return { churnRate, auditResult, formKey: Date.now() };
+      return { ...baseState, auditResult };
     } catch (e: any) {
-      return { churnRate, error: `Audit failed: ${e.message}` };
+      return { ...baseState, error: `Audit failed: ${e.message}` };
     }
   }
 
-  return {};
+  return baseState;
 }
 
 // Churn Risk Action
