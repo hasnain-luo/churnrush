@@ -28,7 +28,6 @@ export type ChurnRateState = {
   churnRate?: string;
   auditResult?: WebsiteAuditOutput;
   error?: string;
-  formKey?: number;
 };
 
 export async function calculateChurnAction(
@@ -64,7 +63,7 @@ export async function calculateChurnAction(
     start === 0 ? 0 : ((start + newCustomers - end) / start) * 100;
   const churnRate = churnRateValue.toFixed(2);
   
-  const baseState = { churnRate, formKey: Date.now() };
+  const baseState = { churnRate };
 
   if (intent === 'audit') {
     try {

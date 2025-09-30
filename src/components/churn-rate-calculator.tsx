@@ -23,7 +23,6 @@ const initialState: ChurnRateState = {};
 export default function ChurnRateCalculator() {
   const [state, formAction] = useActionState(calculateChurnAction, initialState);
   const { toast } = useToast();
-  const [formKey, setFormKey] = useState(Date.now());
 
   useEffect(() => {
     if (state.error) {
@@ -33,14 +32,11 @@ export default function ChurnRateCalculator() {
         description: state.error,
       });
     }
-    if (state.formKey) {
-      setFormKey(state.formKey);
-    }
   }, [state, toast]);
 
   return (
     <Card>
-      <form key={formKey} action={formAction}>
+      <form action={formAction}>
         <CardHeader>
           <CardTitle className="font-headline text-xl">Churn Rate Calculator</CardTitle>
           <CardDescription>
