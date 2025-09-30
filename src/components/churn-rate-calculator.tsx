@@ -13,8 +13,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator';
 import { useToast } from '@/hooks/use-toast';
-import React, { useEffect, useState } from 'react';
-import { useFormState } from 'react-dom';
+import React, { useEffect, useState, useActionState } from 'react';
 import { calculateChurnAction, type ChurnRateState } from '@/app/actions';
 import { LoadingButton } from './loading-button';
 import { ReportDisplay } from './report-display';
@@ -22,7 +21,7 @@ import { ReportDisplay } from './report-display';
 const initialState: ChurnRateState = {};
 
 export default function ChurnRateCalculator() {
-  const [state, formAction] = useFormState(calculateChurnAction, initialState);
+  const [state, formAction] = useActionState(calculateChurnAction, initialState);
   const { toast } = useToast();
   const [formKey, setFormKey] = useState(Date.now());
 

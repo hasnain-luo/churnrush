@@ -8,9 +8,8 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
-import { useFormState } from 'react-dom';
+import { useActionState, useEffect } from 'react';
 import { explainChurnAction, type AiDefinitionState } from '@/app/actions';
-import { useEffect } from 'react';
 import { LoadingButton } from './loading-button';
 import { cn } from '@/lib/utils';
 import { ReportDisplay } from './report-display';
@@ -18,7 +17,7 @@ import { ReportDisplay } from './report-display';
 const initialState: AiDefinitionState = {};
 
 export default function AiDefinition({ className }: { className?: string }) {
-  const [state, formAction] = useFormState(explainChurnAction, initialState);
+  const [state, formAction] = useActionState(explainChurnAction, initialState);
   const { toast } = useToast();
 
   useEffect(() => {

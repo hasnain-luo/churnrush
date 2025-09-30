@@ -20,8 +20,7 @@ import {
 } from '@/components/ui/select';
 import { Separator } from '@/components/ui/separator';
 import { useToast } from '@/hooks/use-toast';
-import React, { useEffect, useState } from 'react';
-import { useFormState } from 'react-dom';
+import React, { useEffect, useState, useActionState } from 'react';
 import { assessRiskAction, type ChurnRiskState } from '@/app/actions';
 import { LoadingButton } from './loading-button';
 import { ReportDisplay } from './report-display';
@@ -30,7 +29,7 @@ import { cn } from '@/lib/utils';
 const initialState: ChurnRiskState = {};
 
 export default function ChurnRiskCalculator() {
-  const [state, formAction] = useFormState(assessRiskAction, initialState);
+  const [state, formAction] = useActionState(assessRiskAction, initialState);
   const { toast } = useToast();
   const [formKey, setFormKey] = useState(Date.now());
 
