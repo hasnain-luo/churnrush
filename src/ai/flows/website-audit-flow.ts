@@ -47,9 +47,7 @@ const prompt = ai.definePrompt({
 
   The "Audit Summary" should be a concise overview of the website's strengths and weaknesses in terms of customer retention.
 
-  The "Personalized Tips" should provide actionable recommendations for improving customer retention on the website, with each tip presented as a separate paragraph. For example:
-  - Integrate compelling client testimonials...
-  - Elevate the visibility and content of your blog...
+  The "Personalized Tips" should provide actionable recommendations for improving customer retention on the website, with each tip presented as a separate paragraph.
 `,
 });
 
