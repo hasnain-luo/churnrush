@@ -86,7 +86,7 @@ export default function ChurnRateCalculator() {
               </p>
               <p className="text-5xl font-bold font-headline text-primary">
                 {state.churnRate}%
-              p>
+              </p>
 
               {!state.auditResult && (
                 <div className="mt-6">
