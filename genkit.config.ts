@@ -1,6 +1,9 @@
 import {defineConfig} from 'genkit';
 import {googleAI} from '@genkit-ai/googleai';
 import {next} from '@genkit-ai/next';
+import { enableFirebaseTelemetry } from '@genkit-ai/firebase';
+
+enableFirebaseTelemetry();
 
 export default defineConfig({
   plugins: [
