@@ -1,50 +1,53 @@
-import ChurnRateCalculator from '@/components/churn-rate-calculator';
-import ChurnRiskCalculator from '@/components/churn-risk-calculator';
-import ClvCalculator from '@/components/clv-calculator';
+
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Calculator, UserCheck, Wallet } from 'lucide-react';
 import Link from 'next/link';
+
+const tools = [
+  {
+    title: 'Churn Rate Calculator',
+    description: 'Calculate your company\'s customer churn rate over a period.',
+    href: '/churn-rate',
+    icon: <Calculator className="size-8 text-primary" />,
+  },
+  {
+    title: 'CLV Calculator',
+    description: 'Calculate the Customer Lifetime Value (CLV).',
+    href: '/clv',
+    icon: <Wallet className="size-8 text-primary" />,
+  },
+  {
+    title: 'Churn Risk Calculator',
+    description: 'Assess an individual customer\'s churn risk score.',
+    href: '/churn-risk',
+    icon: <UserCheck className="size-8 text-primary" />,
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <header className="py-10 md:py-16">
-        <div className="container mx-auto text-center px-4 flex flex-col items-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-headline text-white">
-            ChurnRush
-          </h1>
-          <p className="mt-2 text-base md:text-lg text-white/90">
-            Your smart churn analysis toolkit.
-          </p>
-          <Button asChild className="mt-6 bg-white text-foreground hover:bg-white/90">
-            <Link href="#">
-              How It Works <ArrowRight />
-            </Link>
-          </Button>
-        </div>
-      </header>
-
+    <>
       <main className="flex-grow container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start max-w-6xl mx-auto">
-          <ChurnRateCalculator />
-          <ClvCalculator />
-          <ChurnRiskCalculator />
+          {tools.map((tool) => (
+            <Card key={tool.href} className="flex flex-col h-full">
+              <CardHeader className="flex flex-row items-center gap-4">
+                {tool.icon}
+                <CardTitle className="font-headline text-xl">{tool.title}</CardTitle>
+              </CardHeader>
+              <CardContent className="flex-grow flex flex-col">
+                <p className="text-muted-foreground flex-grow">{tool.description}</p>
+                <Button asChild className="mt-4 w-full">
+                  <Link href={tool.href}>
+                    Go to Calculator <ArrowRight />
+                  </Link>
+                </Button>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </main>
-
-      <footer className="py-6 mt-auto">
-        <div className="container mx-auto text-center">
-          <p className="text-sm text-white/80 space-x-4">
-            <Link href="#" className="hover:underline">About</Link>
-            <span>|</span>
-            <Link href="#" className="hover:underline">Blog</Link>
-            <span>|</span>
-            <Link href="#" className="hover:underline">Terms of Service</Link>
-            <span>|</span>
-            <Link href="#" className="hover:underline">Privacy Policy</Link>
-          </p>
-        </div>
-      </footer>
-    </div>
+    </>
   );
 }
