@@ -3,7 +3,7 @@
 /**
  * @fileOverview A churn prediction AI agent.
  *
- * - predictChurn - A function that handles the churn prediction process.
+ * - predictChurnFlow - A function that handles the churn prediction process.
  * - ChurnPredictionInput - The input type for the predictChurn function.
  * - ChurnPredictionOutput - The return type for the predictChurn function.
  */
@@ -15,11 +15,17 @@ const ChurnPredictionInputSchema = z.object({
   websiteUrl: z.string().describe('The URL of the website.'),
   daysSinceLastActivity: z
     .number()
-    .describe('Number of days since the customer last interacted with the service.'),
+    .describe(
+      'Number of days since the customer last interacted with the service.'
+    ),
   supportTicketsLast30Days: z
     .number()
-    .describe('Number of support tickets opened by the customer in the last 30 days.'),
-  paymentStatus: z.enum(['On-Time', 'Delayed', 'Very Late']).describe('The customer payment status.'),
+    .describe(
+      'Number of support tickets opened by the customer in the last 30 days.'
+    ),
+  paymentStatus: z
+    .enum(['On-Time', 'Delayed', 'Very Late'])
+    .describe('The customer payment status.'),
 });
 
 export type ChurnPredictionInput = z.infer<typeof ChurnPredictionInputSchema>;
@@ -29,16 +35,18 @@ const ChurnPredictionOutputSchema = z.object({
     .number()
     .min(0)
     .max(1)
-    .describe('The predicted probability of churn, as a number between 0 and 1.'),
+    .describe(
+      'The predicted probability of churn, as a number between 0 and 1.'
+    ),
   reasons: z.string().describe('The reasons for the churn prediction.'),
-  tips: z.string().describe('Actionable tips to reduce churn for this customer.'),
+  tips: z
+    .string()
+    .describe('Actionable tips to reduce churn for this customer.'),
 });
 
-export type ChurnPredictionOutput = z.infer<typeof ChurnPredictionOutputSchema>;
-
-export async function predictChurn(input: ChurnPredictionInput): Promise<ChurnPredictionOutput> {
-  return predictChurnFlow(input);
-}
+export type ChurnPredictionOutput = z.infer<
+  typeof ChurnPredictionOutputSchema
+>;
 
 const prompt = ai.definePrompt({
   name: 'churnPredictionPrompt',
@@ -60,7 +68,7 @@ Based on this information, provide:
 Ensure your response is well-structured and easy to understand.`,
 });
 
-const predictChurnFlow = ai.defineFlow(
+export const predictChurnFlow = ai.defineFlow(
   {
     name: 'predictChurnFlow',
     inputSchema: ChurnPredictionInputSchema,

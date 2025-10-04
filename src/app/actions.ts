@@ -2,9 +2,9 @@
 
 import {z} from 'zod';
 import {
-  websiteAudit,
-  predictChurn,
-  explainChurnRateWithAI,
+  websiteAuditFlow,
+  predictChurnFlow,
+  aiDefinitionFlow,
   WebsiteAuditOutput,
   ChurnPredictionOutput,
   AIDefinitionOutput,
@@ -73,7 +73,7 @@ export async function calculateChurnAction(
 
   if (intent === 'audit') {
     try {
-      const auditResult = await websiteAudit({websiteUrl});
+      const auditResult = await websiteAuditFlow({websiteUrl});
       return {...baseState, auditResult};
     } catch (e: any) {
       return {...baseState, error: `Audit failed: ${e.message}`};
@@ -121,7 +121,7 @@ export async function assessRiskAction(
   }
 
   try {
-    const result = await predictChurn(validatedFields.data);
+    const result = await predictChurnFlow(validatedFields.data);
     return {result, formKey: Date.now()};
   } catch (e: any) {
     return {error: `Risk assessment failed: ${e.message}`};
@@ -139,7 +139,7 @@ export async function explainChurnAction(
   formData: FormData
 ): Promise<AiDefinitionState> {
   try {
-    const result = await explainChurnRateWithAI({
+    const result = await aiDefinitionFlow({
       context: 'A user wants to understand churn rate.',
     });
     return {result};

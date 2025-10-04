@@ -1,33 +1,33 @@
 // This is a workaround to get the Genkit flows to be included in the build.
 // The AI SDK requires that the flows are loaded for it to work.
-import "./website-audit-flow";
-import "./ai-definition-flow";
-import "./churn-prediction-flow";
+import './website-audit-flow';
+import './ai-definition-flow';
+import './churn-prediction-flow';
 
 import {
-  websiteAudit,
+  websiteAuditFlow,
   WebsiteAuditInput,
   WebsiteAuditOutput,
-} from "./website-audit-flow";
+} from './website-audit-flow';
 import {
-  predictChurn,
+  predictChurnFlow,
   ChurnPredictionInput,
   ChurnPredictionOutput,
-} from "./churn-prediction-flow";
+} from './churn-prediction-flow';
 import {
-  explainChurnRateWithAI,
+  aiDefinitionFlow,
   AIDefinitionInput,
   AIDefinitionOutput,
-} from "./ai-definition-flow";
+} from './ai-definition-flow';
 
 export {
-  websiteAudit,
+  websiteAuditFlow,
   WebsiteAuditInput,
   WebsiteAuditOutput,
-  predictChurn,
+  predictChurnFlow,
   ChurnPredictionInput,
   ChurnPredictionOutput,
-  explainChurnRateWithAI,
+  aiDefinitionFlow,
   AIDefinitionInput,
   AIDefinitionOutput,
 };

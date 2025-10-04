@@ -3,7 +3,7 @@
 /**
  * @fileOverview A website audit AI agent for churn reduction.
  *
- * - websiteAudit - A function that handles the website audit process.
+ * - websiteAuditFlow - A function that handles the website audit process.
  * - WebsiteAuditInput - The input type for the websiteAudit function.
  * - WebsiteAuditOutput - The return type for the websiteAudit function.
  */
@@ -19,13 +19,11 @@ export type WebsiteAuditInput = z.infer<typeof WebsiteAuditInputSchema>;
 
 const WebsiteAuditOutputSchema = z.object({
   auditSummary: z.string().describe('A summary of the website audit.'),
-  personalizedTips: z.string().describe('Personalized tips for churn reduction, presented as paragraphs.'),
+  personalizedTips: z
+    .string()
+    .describe('Personalized tips for churn reduction, presented as paragraphs.'),
 });
 export type WebsiteAuditOutput = z.infer<typeof WebsiteAuditOutputSchema>;
-
-export async function websiteAudit(input: WebsiteAuditInput): Promise<WebsiteAuditOutput> {
-  return websiteAuditFlow(input);
-}
 
 const prompt = ai.definePrompt({
   name: 'websiteAuditPrompt',
@@ -51,7 +49,7 @@ const prompt = ai.definePrompt({
 `,
 });
 
-const websiteAuditFlow = ai.defineFlow(
+export const websiteAuditFlow = ai.defineFlow(
   {
     name: 'websiteAuditFlow',
     inputSchema: WebsiteAuditInputSchema,

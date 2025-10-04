@@ -3,7 +3,7 @@
 /**
  * @fileOverview A flow to generate an AI-powered definition of churn rate and an explanation of related factors.
  *
- * - explainChurnRateWithAI - A function that triggers the churn definition flow.
+ * - aiDefinitionFlow - A function that triggers the churn definition flow.
  * - AIDefinitionInput - The input type for the explainChurnRateWithAI function.
  * - AIDefinitionOutput - The return type for the explainChurnRateWithAI function.
  */
@@ -24,12 +24,6 @@ const AIDefinitionOutputSchema = z.object({
 });
 export type AIDefinitionOutput = z.infer<typeof AIDefinitionOutputSchema>;
 
-export async function explainChurnRateWithAI(
-  input: AIDefinitionInput
-): Promise<AIDefinitionOutput> {
-  return aiDefinitionFlow(input);
-}
-
 const prompt = ai.definePrompt({
   name: 'aiDefinitionPrompt',
   input: {schema: AIDefinitionInputSchema},
@@ -42,7 +36,7 @@ Definition:
 Explanation: `,
 });
 
-const aiDefinitionFlow = ai.defineFlow(
+export const aiDefinitionFlow = ai.defineFlow(
   {
     name: 'aiDefinitionFlow',
     inputSchema: AIDefinitionInputSchema,
