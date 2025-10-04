@@ -2,11 +2,6 @@
 
 import { onCallGenkit } from 'firebase-functions/v2/https';
 import { defineSecret } from 'firebase-functions/params';
-
-// This is a workaround to get the Genkit flows to be included in the build.
-// The AI SDK requires that the flows are loaded for it to work.
-import '@/ai';
-
 import {
   websiteAuditFlow,
   predictChurnFlow,
@@ -20,7 +15,6 @@ export const websiteaudit = onCallGenkit(
     secrets: [geminiApiKey],
     authPolicy: (auth) => {
       if (!auth) {
-        // You can also throw an HttpsError here.
         return false;
       }
       return true;
