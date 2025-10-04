@@ -23,13 +23,24 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
       {
-        protocol: 'https',
+        protocol: 'https' as const,
         hostname: 'picsum.photos',
         port: '',
         pathname: '/**',
       },
     ],
   },
+  devIndicators: {
+    buildActivity: false,
+  },
+  // In a future major version of Next.js, you will need to explicitly configure
+  // "allowedDevOrigins" in next.config to allow cross-origin requests.
+  // The value below is based on the warning from the server logs.
+  // For more information, see:
+  // https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+  allowedDevOrigins: [
+    'https://6000-firebase-studio-1759255500892.cluster-fdkw7vjj7bgguspe3fbbc25tra.cloudworkstations.dev',
+  ],
 };
 
 export default nextConfig;
