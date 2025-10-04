@@ -123,3 +123,54 @@ export async function calculateChurnRiskAction(
 
   return { riskScore: { level, score }, formData: currentFormData };
 }
+
+// CLV Calculator Action
+const clvSchema = z.object({
+  arpm: z.coerce.number().min(0, 'Must be a positive number'),
+  margin: z.coerce.number().min(0, 'Must be a positive number').max(100, 'Cannot exceed 100'),
+  churn: z.coerce.number().min(0, 'Must be a positive number').max(100, 'Cannot exceed 100'),
+});
+
+export type ClvState = {
+  clv?: string;
+  error?: string;
+  formData?: {
+    arpm: number;
+    margin: number;
+    churn: number;
+  };
+};
+
+export async function calculateClvAction(
+  prevState: ClvState,
+  formData: FormData
+): Promise<ClvState> {
+  const validatedFields = clvSchema.safeParse(Object.fromEntries(formData));
+
+  if (!validatedFields.success) {
+    const errorMessages = Object.values(validatedFields.error.flatten().fieldErrors)
+      .flat()
+      .join(', ');
+    return { error: errorMessages };
+  }
+
+  const { arpm, margin, churn } = validatedFields.data;
+  const currentFormData = { arpm, margin, churn };
+
+  if (churn === 0) {
+    return { error: 'Churn rate cannot be zero for this calculation.', formData: currentFormData };
+  }
+
+  const monthlyChurnRate = churn / 100;
+  const grossMargin = margin / 100;
+  
+  const customerLifetime = 1 / monthlyChurnRate;
+  const clvValue = arpm * customerLifetime * grossMargin;
+
+  const clv = clvValue.toLocaleString('en-US', {
+    style: 'currency',
+    currency: 'USD',
+  });
+
+  return { clv, formData: currentFormData };
+}
