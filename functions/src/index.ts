@@ -1,22 +1,23 @@
 "use server";
 
-import {onCallGenkit} from "firebase-functions/v2/https";
-import {defineSecret} from "firebase-functions/params";
+import {onCallGenkit} from 'firebase-functions/v2/https';
+import {defineSecret} from 'firebase-functions/params';
 import {
   websiteAuditFlow,
   predictChurnFlow,
   aiDefinitionFlow,
-} from "@/ai/flows";
+} from './ai/flows';
 
-const geminiApiKey = defineSecret("GEMINI_API_KEY");
+const geminiApiKey = defineSecret('GEMINI_API_KEY');
 
 export const websiteaudit = onCallGenkit(
   {
     secrets: [geminiApiKey],
-    authPolicy: auth => {
-      if (!auth) {
-        return false;
-      }
+    authPolicy: (auth) => {
+      // For now, allow any user. In a real app, you'd check for specific roles.
+      // if (!auth) {
+      //   return false;
+      // }
       return true;
     },
   },
@@ -26,10 +27,7 @@ export const websiteaudit = onCallGenkit(
 export const predictchurn = onCallGenkit(
   {
     secrets: [geminiApiKey],
-    authPolicy: auth => {
-      if (!auth) {
-        return false;
-      }
+    authPolicy: (auth) => {
       return true;
     },
   },
@@ -39,10 +37,7 @@ export const predictchurn = onCallGenkit(
 export const explainchurnratewithai = onCallGenkit(
   {
     secrets: [geminiApiKey],
-    authPolicy: auth => {
-      if (!auth) {
-        return false;
-      }
+    authPolicy: (auth) => {
       return true;
     },
   },

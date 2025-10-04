@@ -1,14 +1,27 @@
 'use server';
 
+import {initializeApp, getApps, getApp} from 'firebase-admin/app';
+import {getFunctions} from 'firebase-admin/functions';
 import {z} from 'zod';
-import {
-  websiteAuditFlow,
-  predictChurnFlow,
-  aiDefinitionFlow,
-  WebsiteAuditOutput,
-  ChurnPredictionOutput,
-  AIDefinitionOutput,
-} from '@/ai/flows';
+
+if (!getApps().length) {
+  initializeApp();
+}
+
+async function callGenkitFlow(flowName: string, data: any) {
+  const functions = getFunctions();
+  const callable = functions.httpsCallable(flowName, {
+    timeoutSeconds: 60,
+  });
+  try {
+    const result = await callable(data);
+    return result.data;
+  } catch (error: any) {
+    console.error(`Error calling flow ${flowName}:`, error);
+    // Functions automatically wrap errors, so we need to unpack them.
+    throw new Error(error.details?.message || error.message);
+  }
+}
 
 // Churn Rate Calculator Action
 const churnRateSchema = z.object({
@@ -21,7 +34,7 @@ const churnRateSchema = z.object({
 
 export type ChurnRateState = {
   churnRate?: string;
-  auditResult?: WebsiteAuditOutput;
+  auditResult?: any;
   error?: string;
   formData?: {
     websiteUrl: string;
@@ -73,7 +86,7 @@ export async function calculateChurnAction(
 
   if (intent === 'audit') {
     try {
-      const auditResult = await websiteAuditFlow({websiteUrl});
+      const auditResult = await callGenkitFlow('websiteaudit', {websiteUrl});
       return {...baseState, auditResult};
     } catch (e: any) {
       return {...baseState, error: `Audit failed: ${e.message}`};
@@ -98,7 +111,7 @@ const churnRiskSchema = z.object({
 });
 
 export type ChurnRiskState = {
-  result?: ChurnPredictionOutput;
+  result?: any;
   error?: string;
   formKey?: number;
 };
@@ -121,7 +134,7 @@ export async function assessRiskAction(
   }
 
   try {
-    const result = await predictChurnFlow(validatedFields.data);
+    const result = await callGenkitFlow('predictchurn', validatedFields.data);
     return {result, formKey: Date.now()};
   } catch (e: any) {
     return {error: `Risk assessment failed: ${e.message}`};
@@ -130,7 +143,7 @@ export async function assessRiskAction(
 
 // AI Definition Action
 export type AiDefinitionState = {
-  result?: AIDefinitionOutput;
+  result?: any;
   error?: string;
 };
 
@@ -139,7 +152,7 @@ export async function explainChurnAction(
   formData: FormData
 ): Promise<AiDefinitionState> {
   try {
-    const result = await aiDefinitionFlow({
+    const result = await callGenkitFlow('explainchurnratewithai', {
       context: 'A user wants to understand churn rate.',
     });
     return {result};

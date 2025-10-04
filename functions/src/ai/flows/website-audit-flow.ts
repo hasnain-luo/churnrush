@@ -8,9 +8,31 @@
  * - WebsiteAuditOutput - The return type for the websiteAudit function.
  */
 
-import {ai} from '@/ai/genkit';
+import {ai} from '../genkit';
 import {z} from 'genkit';
-import {fetchTextContent} from '@/services/url-service';
+
+async function fetchTextContent(url: string): Promise<string> {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const html = await response.text();
+    const noScripts = html.replace(
+      /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi,
+      ''
+    );
+    const noStyles = noScripts.replace(
+      /<style\b[^<]*(?:(?!<\/style>)<[^<]*)*<\/style>/gi,
+      ''
+    );
+    const plainText = noStyles.replace(/<[^>]+>/g, '');
+    return plainText.replace(/\s+/g, ' ').trim();
+  } catch (error: any) {
+    console.error(`Error fetching URL content for ${url}:`, error);
+    throw new Error(`Could not fetch content from URL: ${url}. ${error.message}`);
+  }
+}
 
 const WebsiteAuditInputSchema = z.object({
   websiteUrl: z.string().url().describe('The URL of the website to audit.'),

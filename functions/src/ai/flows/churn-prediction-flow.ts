@@ -8,7 +8,7 @@
  * - ChurnPredictionOutput - The return type for the predictChurn function.
  */
 
-import {ai} from '@/ai/genkit';
+import {ai} from '../genkit';
 import {z} from 'genkit';
 
 const ChurnPredictionInputSchema = z.object({
