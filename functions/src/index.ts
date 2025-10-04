@@ -1,21 +1,56 @@
-/**
- * Import function triggers from their respective submodules:
- *
- * import {onCall} from "firebase-functions/v2/https";
- * import {onDocumentWritten} from "firebase-functions/v2/firestore";
- *
- * See a full list of supported triggers at https://firebase.google.com/docs/functions
- */
+'use server';
 
-import {setGlobalOptions} from "firebase-functions";
+import { onCallGenkit } from 'firebase-functions/v2/https';
+import { defineSecret } from 'firebase-functions/params';
 
-// Start writing functions
-// https://firebase.google.com/docs/functions/typescript
+// This is a workaround to get the Genkit flows to be included in the build.
+// The AI SDK requires that the flows are loaded for it to work.
+import '@/ai';
 
-// For cost control, you can set the maximum number of containers that can be
-// running at the same time. This helps mitigate the impact of unexpected
-// traffic spikes by instead downgrading performance.
-setGlobalOptions({maxInstances: 10});
+import {
+  websiteAuditFlow,
+  predictChurnFlow,
+  aiDefinitionFlow,
+} from '@/ai/flows';
 
-// The Genkit flows are automatically exported as functions.
-// No need to manually export them here.
+const geminiApiKey = defineSecret('GEMINI_API_KEY');
+
+export const websiteaudit = onCallGenkit(
+  {
+    secrets: [geminiApiKey],
+    authPolicy: (auth) => {
+      if (!auth) {
+        // You can also throw an HttpsError here.
+        return false;
+      }
+      return true;
+    },
+  },
+  websiteAuditFlow
+);
+
+export const predictchurn = onCallGenkit(
+  {
+    secrets: [geminiApiKey],
+    authPolicy: (auth) => {
+      if (!auth) {
+        return false;
+      }
+      return true;
+    },
+  },
+  predictChurnFlow
+);
+
+export const explainchurnratewithai = onCallGenkit(
+  {
+    secrets: [geminiApiKey],
+    authPolicy: (auth) => {
+      if (!auth) {
+        return false;
+      }
+      return true;
+    },
+  },
+  aiDefinitionFlow
+);
