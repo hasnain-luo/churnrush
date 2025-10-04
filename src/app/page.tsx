@@ -1,4 +1,5 @@
 import ChurnRateCalculator from '@/components/churn-rate-calculator';
+import ChurnRiskCalculator from '@/components/churn-risk-calculator';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
@@ -23,8 +24,9 @@ export default function Home() {
       </header>
 
       <main className="flex-grow container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 gap-8 items-start max-w-xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start max-w-4xl mx-auto">
           <ChurnRateCalculator />
+          <ChurnRiskCalculator />
         </div>
       </main>
 
