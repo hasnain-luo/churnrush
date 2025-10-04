@@ -1,29 +1,14 @@
-
 'use server';
 
-import { z } from 'zod';
-import { getFunctions } from 'firebase-admin/functions';
-import { initializeApp, getApps } from 'firebase-admin/app';
-
+import {z} from 'zod';
 import {
+  websiteAudit,
+  predictChurn,
+  explainChurnRateWithAI,
   WebsiteAuditOutput,
   ChurnPredictionOutput,
   AIDefinitionOutput,
 } from '@/ai/flows';
-
-// Initialize Firebase Admin SDK if not already initialized
-if (!getApps().length) {
-  initializeApp();
-}
-
-async function callGenkitFlow<T, O>(flowName: string, data: T): Promise<O> {
-  const functions = getFunctions();
-  const callable = functions.httpsCallable(flowName, {
-    timeout: 540000,
-  });
-  const result = await callable(data);
-  return result.data as O;
-}
 
 // Churn Rate Calculator Action
 const churnRateSchema = z.object({
@@ -60,7 +45,7 @@ export async function calculateChurnAction(
     )
       .flat()
       .join(', ');
-    return { error: errorMessages };
+    return {error: errorMessages};
   }
 
   const {
@@ -70,25 +55,28 @@ export async function calculateChurnAction(
     websiteUrl,
     intent,
   } = validatedFields.data;
-  
-  const currentFormData = { websiteUrl, start, new: newCustomers, end };
+
+  const currentFormData = {websiteUrl, start, new: newCustomers, end};
 
   if (start + newCustomers < end) {
-    return { error: 'Customers at end cannot be more than start + new.', formData: currentFormData };
+    return {
+      error: 'Customers at end cannot be more than start + new.',
+      formData: currentFormData,
+    };
   }
 
   const churnRateValue =
     start === 0 ? 0 : ((start + newCustomers - end) / start) * 100;
   const churnRate = churnRateValue.toFixed(2);
-  
-  const baseState = { churnRate, formData: currentFormData };
+
+  const baseState = {churnRate, formData: currentFormData};
 
   if (intent === 'audit') {
     try {
-      const auditResult = await callGenkitFlow<any, WebsiteAuditOutput>('websiteaudit', { websiteUrl });
-      return { ...baseState, auditResult };
+      const auditResult = await websiteAudit({websiteUrl});
+      return {...baseState, auditResult};
     } catch (e: any) {
-      return { ...baseState, error: `Audit failed: ${e.message}` };
+      return {...baseState, error: `Audit failed: ${e.message}`};
     }
   }
 
@@ -129,14 +117,14 @@ export async function assessRiskAction(
     )
       .flat()
       .join(', ');
-    return { error: errorMessages };
+    return {error: errorMessages};
   }
 
   try {
-    const result = await callGenkitFlow<z.infer<typeof churnRiskSchema>, ChurnPredictionOutput>('predictchurn', validatedFields.data);
-    return { result, formKey: Date.now() };
+    const result = await predictChurn(validatedFields.data);
+    return {result, formKey: Date.now()};
   } catch (e: any) {
-    return { error: `Risk assessment failed: ${e.message}` };
+    return {error: `Risk assessment failed: ${e.message}`};
   }
 }
 
@@ -151,11 +139,11 @@ export async function explainChurnAction(
   formData: FormData
 ): Promise<AiDefinitionState> {
   try {
-    const result = await callGenkitFlow<any, AIDefinitionOutput>('explainchurnratewithai', {
+    const result = await explainChurnRateWithAI({
       context: 'A user wants to understand churn rate.',
     });
-    return { result };
+    return {result};
   } catch (e: any) {
-    return { error: `AI explanation failed: ${e.message}` };
+    return {error: `AI explanation failed: ${e.message}`};
   }
 }
