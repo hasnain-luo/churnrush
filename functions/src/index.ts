@@ -1,14 +1,14 @@
-'use server';
+"use server";
 
-import { onCallGenkit } from 'firebase-functions/v2/https';
-import { defineSecret } from 'firebase-functions/params';
+import {onCallGenkit} from "firebase-functions/v2/https";
+import {defineSecret} from "firebase-functions/params";
 import {
-  websiteAuditFlow,
-  predictChurnFlow,
-  aiDefinitionFlow,
-} from '@/ai/flows';
+  websiteAudit,
+  predictChurn,
+  explainChurnRateWithAI,
+} from "@/ai/flows";
 
-const geminiApiKey = defineSecret('GEMINI_API_KEY');
+const geminiApiKey = defineSecret("GEMINI_API_KEY");
 
 export const websiteaudit = onCallGenkit(
   {
@@ -20,7 +20,7 @@ export const websiteaudit = onCallGenkit(
       return true;
     },
   },
-  websiteAuditFlow
+  websiteAudit
 );
 
 export const predictchurn = onCallGenkit(
@@ -33,7 +33,7 @@ export const predictchurn = onCallGenkit(
       return true;
     },
   },
-  predictChurnFlow
+  predictChurn
 );
 
 export const explainchurnratewithai = onCallGenkit(
@@ -46,5 +46,5 @@ export const explainchurnratewithai = onCallGenkit(
       return true;
     },
   },
-  aiDefinitionFlow
+  explainChurnRateWithAI
 );
