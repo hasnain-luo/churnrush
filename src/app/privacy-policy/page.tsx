@@ -1,6 +1,16 @@
+
+'use client';
+
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { useEffect, useState } from 'react';
 
 export default function PrivacyPolicyPage() {
+  const [date, setDate] = useState('');
+
+  useEffect(() => {
+    setDate(new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }));
+  }, []);
+
   return (
     <main className="flex-grow container mx-auto px-4 py-8">
       <div className="max-w-3xl mx-auto">
@@ -9,7 +19,7 @@ export default function PrivacyPolicyPage() {
             <CardTitle className="font-headline text-3xl">Privacy Policy</CardTitle>
           </CardHeader>
           <CardContent className="space-y-6 text-card-foreground/90">
-            <p className="text-muted-foreground">Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+            <p className="text-muted-foreground">Last updated: {date}</p>
             
             <p>
               ChurnRush ("we," "us," or "our") operates the ChurnRush website (the "Service"). This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data.
@@ -49,7 +59,7 @@ export default function PrivacyPolicyPage() {
             <div className="space-y-2">
               <h2 className="font-semibold text-xl">5. Contact Us</h2>
               <p>
-                If you have any questions about this Privacy Policy, please contact us through our contact page.
+                If you have any questions about this Privacy Policy, please contact us through our <a href="/contact" className="text-primary underline">contact page</a>.
               </p>
             </div>
           </CardContent>
