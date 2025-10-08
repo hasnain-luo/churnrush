@@ -28,7 +28,7 @@ export default function RootLayout({
         <header className="py-6">
           <div className="container mx-auto px-4 flex justify-center items-center">
             <Link href="/" className="flex items-center gap-2">
-              <h1 className="text-4xl md:text-5xl font-bold font-headline text-white drop-shadow-xl">
+              <h1 className="text-4xl md:text-5xl font-bold font-headline text-white drop-shadow-xl transition-all duration-300 hover:drop-shadow-2xl hover:scale-105">
                 ChurnRush
               </h1>
             </Link>
