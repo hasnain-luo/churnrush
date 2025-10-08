@@ -6,6 +6,12 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'LTV:CAC Ratio Calculator',
+  description: 'Calculate your LTV to CAC ratio to determine the profitability of your customer acquisition. Understand how churn affects your marketing ROI.',
+};
 
 export default function LtvCacRatioPage() {
   return (

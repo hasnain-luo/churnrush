@@ -6,6 +6,12 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'MRR Churn Rate Calculator (Gross & Net)',
+  description: 'Calculate your Gross and Net Monthly Recurring Revenue (MRR) churn rates. Quantify the financial impact of customer churn and expansion revenue.',
+};
 
 export default function MrrChurnPage() {
   return (

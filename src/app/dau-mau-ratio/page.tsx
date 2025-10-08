@@ -6,6 +6,12 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'DAU/MAU Ratio Calculator for Product Stickiness',
+  description: 'Calculate your DAU/MAU ratio to measure product stickiness, a key predictor of customer churn. See how many monthly users engage on a daily basis.',
+};
 
 export default function DauMauRatioPage() {
   return (

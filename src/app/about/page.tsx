@@ -1,5 +1,11 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About ChurnRush',
+  description: 'Learn about the mission behind ChurnRush, your dedicated partner in the fight against customer churn for SaaS and subscription businesses.',
+};
 
 export default function AboutPage() {
   return (

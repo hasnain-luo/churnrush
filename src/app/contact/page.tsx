@@ -2,6 +2,12 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Mail } from 'lucide-react';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Contact Us',
+  description: 'Get in touch with the ChurnRush team for questions, feedback, or partnership inquiries. We would love to hear from you.',
+};
 
 export default function ContactPage() {
   return (

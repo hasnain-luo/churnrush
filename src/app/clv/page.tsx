@@ -6,6 +6,12 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Customer Lifetime Value (CLV) Calculator',
+  description: 'Calculate your Customer Lifetime Value (CLV) to understand the total revenue you can expect from a customer. See how churn rate directly impacts CLV.',
+};
 
 export default function ClvPage() {
   return (

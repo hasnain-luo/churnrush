@@ -6,6 +6,12 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Customer Retention Rate Calculator',
+  description: 'Calculate your customer retention rate, the inverse of churn. Measure the percentage of customers you successfully keep over a specific period.',
+};
 
 export default function CustomerRetentionPage() {
   return (

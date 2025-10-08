@@ -6,6 +6,12 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Net Revenue Churn Calculator (NDR)',
+  description: 'Calculate your Net Dollar Retention (NDR) to see revenue growth from existing customers. A vital metric for understanding compound growth and offsetting churn.',
+};
 
 export default function NetRevenueChurnPage() {
   return (

@@ -6,6 +6,12 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'CAC Payback Period Calculator',
+  description: 'Calculate your Customer Acquisition Cost (CAC) payback period. Find out how many months it takes to recover acquisition costs and see how churn impacts profitability.',
+};
 
 export default function PaybackPeriodPage() {
   return (

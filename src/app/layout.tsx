@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import './globals.css';
 import { cn } from '@/lib/utils';
@@ -5,8 +6,11 @@ import { Toaster } from '@/components/ui/toaster';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'ChurnRush',
-  description: 'Your smart churn analysis toolkit.',
+  title: {
+    default: 'ChurnRush: Free Churn & SaaS Metric Calculators',
+    template: '%s | ChurnRush',
+  },
+  description: 'A complete suite of free calculators to analyze customer churn, retention, MRR, LTV, and other essential SaaS metrics for business growth.',
 };
 
 export default function RootLayout({

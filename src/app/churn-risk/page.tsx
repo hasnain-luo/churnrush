@@ -6,6 +6,12 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Customer Churn Risk Calculator',
+  description: 'Assess an individual customer’s churn risk score based on key metrics like tenure, usage, and satisfaction. Proactively identify at-risk customers.',
+};
 
 export default function ChurnRiskPage() {
   return (

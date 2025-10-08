@@ -6,6 +6,12 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Customer Churn Rate Calculator',
+  description: 'A free tool to calculate your customer churn rate. Understand and measure how many customers you lose over a specific period to improve retention.',
+};
 
 export default function ChurnRatePage() {
   return (
