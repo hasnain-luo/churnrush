@@ -27,7 +27,15 @@ export default function RootLayout({
       <body className={cn('font-body antialiased flex flex-col min-h-screen')}>
         <header className="py-6">
           <div className="container mx-auto px-4 flex justify-between items-center">
-            <nav className="flex gap-6 items-center">
+            <div className="flex-1"></div>
+            <div className="flex-1 text-center">
+              <Link href="/" className="inline-block">
+                <h1 className="text-4xl md:text-5xl font-bold font-headline text-white drop-shadow-xl transition-all duration-300 hover:drop-shadow-2xl hover:scale-105">
+                  ChurnRush
+                </h1>
+              </Link>
+            </div>
+            <nav className="flex-1 flex justify-end gap-6 items-center">
               <Link href="#" className="text-white/80 hover:text-white hover:underline transition-colors">
                 About
               </Link>
@@ -35,13 +43,6 @@ export default function RootLayout({
                 Blog
               </Link>
             </nav>
-            <div className="absolute left-1/2 -translate-x-1/2">
-              <Link href="/" className="flex items-center gap-2">
-                <h1 className="text-4xl md:text-5xl font-bold font-headline text-white drop-shadow-xl transition-all duration-300 hover:drop-shadow-2xl hover:scale-105">
-                  ChurnRush
-                </h1>
-              </Link>
-            </div>
           </div>
         </header>
 
