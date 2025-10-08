@@ -75,7 +75,7 @@ export default function Home() {
               <CardContent className="flex-grow flex flex-col">
                 <p className="text-muted-foreground flex-grow">{tool.description}</p>
                 <Button asChild className="mt-4 w-full">
-                  <Link href={tool.href}>
+                  <Link href={tool.href} target="_blank" rel="noopener noreferrer">
                     Go to Calculator <ArrowRight />
                   </Link>
                 </Button>
