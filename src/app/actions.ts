@@ -360,3 +360,92 @@ export async function calculateDauMauAction(
 
   return { ratio, formData: currentFormData };
 }
+
+// Customer Retention Rate Calculator Action
+const retentionSchema = z.object({
+  start: z.coerce.number().int().min(0, 'Must be a positive integer'),
+  new: z.coerce.number().int().min(0, 'Must be a positive integer'),
+  end: z.coerce.number().int().min(0, 'Must be a positive integer'),
+});
+
+export type RetentionState = {
+  rate?: string;
+  error?: string;
+  formData?: {
+    start: number;
+    new: number;
+    end: number;
+  };
+};
+
+export async function calculateRetentionAction(
+  prevState: RetentionState,
+  formData: FormData
+): Promise<RetentionState> {
+  const validatedFields = retentionSchema.safeParse(Object.fromEntries(formData));
+
+  if (!validatedFields.success) {
+    const errorMessages = Object.values(validatedFields.error.flatten().fieldErrors)
+      .flat()
+      .join(', ');
+    return { error: errorMessages };
+  }
+
+  const { start, new: newCustomers, end } = validatedFields.data;
+  const currentFormData = { start, new: newCustomers, end };
+
+  if (end < newCustomers) {
+    return { error: 'Ending customers cannot be less than new customers.', formData: currentFormData };
+  }
+
+  if (start === 0) {
+     return { rate: '0.00', formData: currentFormData };
+  }
+
+  const retainedCustomers = end - newCustomers;
+  const rateValue = (retainedCustomers / start) * 100;
+  const rate = rateValue.toFixed(2);
+
+  return { rate, formData: currentFormData };
+}
+
+// Net Revenue Churn Calculator Action
+const netRevenueChurnSchema = z.object({
+  mrrStart: z.coerce.number().min(0, 'Must be a positive number'),
+  mrrEnd: z.coerce.number().min(0, 'Must be a positive number'),
+});
+
+export type NetRevenueChurnState = {
+  rate?: string;
+  error?: string;
+  formData?: {
+    mrrStart: number;
+    mrrEnd: number;
+  };
+};
+
+export async function calculateNetRevenueChurnAction(
+  prevState: NetRevenueChurnState,
+  formData: FormData
+): Promise<NetRevenueChurnState> {
+  const validatedFields = netRevenueChurnSchema.safeParse(Object.fromEntries(formData));
+
+  if (!validatedFields.success) {
+    const errorMessages = Object.values(validatedFields.error.flatten().fieldErrors)
+      .flat()
+      .join(', ');
+    return { error: errorMessages };
+  }
+
+  const { mrrStart, mrrEnd } = validatedFields.data;
+  const currentFormData = { mrrStart, mrrEnd };
+
+  if (mrrStart === 0) {
+    return { error: 'Starting MRR cannot be zero.', formData: currentFormData };
+  }
+
+  const ndr = (mrrEnd / mrrStart) * 100;
+  const rate = ndr.toFixed(2);
+
+  return { rate, formData: currentFormData };
+}

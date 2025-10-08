@@ -1,7 +1,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Calculator, UserCheck, Wallet, TrendingDown, Ratio, Clock, Users } from 'lucide-react';
+import { ArrowRight, Calculator, UserCheck, Wallet, TrendingDown, Ratio, Clock, Users, UserRoundCheck, Combine } from 'lucide-react';
 import Link from 'next/link';
 
 const tools = [
@@ -46,6 +46,18 @@ const tools = [
     description: 'Calculate the ratio of Daily Active Users to Monthly Active Users to measure product stickiness.',
     href: '/dau-mau-ratio',
     icon: <Users className="size-8 text-primary" />,
+  },
+  {
+    title: 'Customer Retention Rate',
+    description: 'Measure the percentage of customers you have successfully kept over time.',
+    href: '/customer-retention',
+    icon: <UserRoundCheck className="size-8 text-primary" />,
+  },
+  {
+    title: 'Net Revenue Churn',
+    description: 'Calculate your Net Dollar Retention (NDR) to measure revenue growth from existing customers.',
+    href: '/net-revenue-churn',
+    icon: <Combine className="size-8 text-primary" />,
   }
 ];
 
