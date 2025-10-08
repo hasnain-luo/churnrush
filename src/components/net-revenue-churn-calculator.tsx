@@ -13,14 +13,15 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator';
 import { useToast } from '@/hooks/use-toast';
-import React, { useEffect, useActionState } from 'react';
+import React, { useEffect } from 'react';
+import { useFormState } from 'react-dom';
 import { calculateNetRevenueChurnAction, type NetRevenueChurnState } from '@/app/actions';
 import { LoadingButton } from './loading-button';
 
 const initialState: NetRevenueChurnState = {};
 
 export default function NetRevenueChurnCalculator() {
-  const [state, formAction] = useActionState(calculateNetRevenueChurnAction, initialState);
+  const [state, formAction] = useFormState(calculateNetRevenueChurnAction, initialState);
   const { toast } = useToast();
 
   useEffect(() => {

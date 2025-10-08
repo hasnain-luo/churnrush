@@ -13,14 +13,15 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator';
 import { useToast } from '@/hooks/use-toast';
-import React, { useEffect, useActionState } from 'react';
+import React, { useEffect } from 'react';
+import { useFormState } from 'react-dom';
 import { calculateLtvCacAction, type LtvCacState } from '@/app/actions';
 import { LoadingButton } from './loading-button';
 
 const initialState: LtvCacState = {};
 
 export default function LtvCacRatioCalculator() {
-  const [state, formAction] = useActionState(calculateLtvCacAction, initialState);
+  const [state, formAction] = useFormState(calculateLtvCacAction, initialState);
   const { toast } = useToast();
 
   useEffect(() => {

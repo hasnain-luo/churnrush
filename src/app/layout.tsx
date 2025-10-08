@@ -28,7 +28,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className={cn('font-body antialiased flex flex-col min-h-screen')}>
+      <body className={cn('font-body antialiased flex flex-col min-h-screen bg-background')}>
         <header className="py-6">
           <div className="container mx-auto px-4 flex justify-between items-center">
             <div className="flex-1"></div>

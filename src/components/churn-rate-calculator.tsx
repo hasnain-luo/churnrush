@@ -13,14 +13,15 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator';
 import { useToast } from '@/hooks/use-toast';
-import React, { useEffect, useActionState } from 'react';
+import React, { useEffect } from 'react';
+import { useFormState } from 'react-dom';
 import { calculateChurnAction, type ChurnRateState } from '@/app/actions';
 import { LoadingButton } from './loading-button';
 
 const initialState: ChurnRateState = {};
 
 export default function ChurnRateCalculator() {
-  const [state, formAction] = useActionState(calculateChurnAction, initialState);
+  const [state, formAction] = useFormState(calculateChurnAction, initialState);
   const { toast } = useToast();
 
   useEffect(() => {

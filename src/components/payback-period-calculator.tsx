@@ -13,14 +13,15 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator';
 import { useToast } from '@/hooks/use-toast';
-import React, { useEffect, useActionState } from 'react';
+import React, { useEffect } from 'react';
+import { useFormState } from 'react-dom';
 import { calculatePaybackPeriodAction, type PaybackPeriodState } from '@/app/actions';
 import { LoadingButton } from './loading-button';
 
 const initialState: PaybackPeriodState = {};
 
 export default function PaybackPeriodCalculator() {
-  const [state, formAction] = useActionState(calculatePaybackPeriodAction, initialState);
+  const [state, formAction] = useFormState(calculatePaybackPeriodAction, initialState);
   const { toast } = useToast();
 
   useEffect(() => {
