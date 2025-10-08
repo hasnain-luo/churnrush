@@ -27,9 +27,9 @@ export default function ClvPage() {
               <p>
                 Customer Lifetime Value (CLV or LTV) is a crucial metric that
                 predicts the total net profit a business can expect from a
-                single customer over the entire duration of their relationship.
-                It&apos;s a forward-looking metric that directly contrasts with metrics
-                that measure past performance. Understanding your CLV is
+                single customer over their entire duration of their relationship.
+                It's a forward-looking metric that directly illustrates the
+                financial impact of customer <strong>churn</strong>. Understanding your CLV is
                 fundamental to building a sustainable business model, as it
                 highlights the long-term value of retaining customers versus the
                 one-time cost of acquiring them.

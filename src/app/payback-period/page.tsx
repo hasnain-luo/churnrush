@@ -26,10 +26,10 @@ export default function PaybackPeriodPage() {
               <p>
                 The Customer Acquisition Cost (CAC) Payback Period is the
                 number of months it takes for your company to earn back the
-                money it spent to acquire a new customer. It&apos;s a critical
-                metric for cash flow and capital efficiency. A shorter payback
+                money it spent to acquire a new customer. A shorter payback
                 period means you can reinvest your money faster to fuel
-                growth.
+                growth, and it is a key metric for understanding the impact of
+                customer <strong>churn</strong> on your cash flow.
               </p>
             </div>
             <div>

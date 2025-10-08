@@ -26,7 +26,8 @@ export default function DauMauRatioPage() {
               <p>
                 The Daily Active Users to Monthly Active Users (DAU/MAU) ratio
                 is a key metric for measuring the &quot;stickiness&quot; of your
-                product. It shows what percentage of your monthly users engage
+                product, which is a leading indicator of customer{' '}
+                <strong>churn</strong>. It shows what percentage of your monthly users engage
                 with your product on a daily basis. A higher ratio indicates
                 that your product is valuable and has become a regular part of
                 your users&apos; routine.

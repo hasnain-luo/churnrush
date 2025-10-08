@@ -28,7 +28,7 @@ export default function LtvCacRatioPage() {
                 is a critical SaaS metric that compares the value of a
                 customer over their lifetime to the cost of acquiring them. It
                 answers a fundamental question: Are you spending your money
-                wisely to grow your business? A healthy ratio is a strong
+                wisely to acquire customers who will not <strong>churn</strong>? A healthy ratio is a strong
                 indicator of a company&apos;s profitability, scalability, and the
                 effectiveness of its marketing and sales engine.
               </p>
