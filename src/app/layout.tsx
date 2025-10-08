@@ -36,11 +36,14 @@ export default function RootLayout({
               </Link>
             </div>
             <nav className="flex-1 flex justify-end gap-6 items-center">
-              <Link href="#" className="text-white/80 hover:text-white hover:underline transition-colors">
+              <Link href="/about" className="text-white/80 hover:text-white hover:underline transition-colors">
                 About
               </Link>
-              <Link href="#" className="text-white/80 hover:text-white hover:underline transition-colors">
+              <Link href="/blog" className="text-white/80 hover:text-white hover:underline transition-colors">
                 Blog
+              </Link>
+              <Link href="/contact" className="text-white/80 hover:text-white hover:underline transition-colors">
+                Contact
               </Link>
             </nav>
           </div>
@@ -51,9 +54,9 @@ export default function RootLayout({
         <footer className="py-6 mt-auto">
           <div className="container mx-auto text-center">
             <p className="text-sm text-white/80 space-x-4">
-              <Link href="#" className="hover:underline">Terms of Service</Link>
+              <Link href="/terms-of-service" className="hover:underline">Terms of Service</Link>
               <span>|</span>
-              <Link href="#" className="hover:underline">Privacy Policy</Link>
+              <Link href="/privacy-policy" className="hover:underline">Privacy Policy</Link>
             </p>
           </div>
         </footer>
