@@ -7,6 +7,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Customer Lifetime Value (CLV) Calculator',
@@ -33,12 +34,16 @@ export default function ClvPage() {
               <p>
                 Customer Lifetime Value (CLV or LTV) is a crucial metric that
                 predicts the total net profit a business can expect from a
-                single customer over their entire duration of their relationship.
-                It's a forward-looking metric that directly illustrates the
-                financial impact of customer <strong>churn</strong>. Understanding your CLV is
-                fundamental to building a sustainable business model, as it
-                highlights the long-term value of retaining customers versus the
-                one-time cost of acquiring them.
+                single customer over their entire duration of their
+                relationship. It's a forward-looking metric that directly
+                illustrates the financial impact of customer{' '}
+                <Link href="/churn-rate" className="text-primary font-semibold hover:underline">
+                  churn
+                </Link>
+                . Understanding your CLV is fundamental to building a
+                sustainable business model, as it highlights the long-term
+                value of retaining customers versus the one-time cost of
+                acquiring them.
               </p>
             </div>
 
@@ -47,14 +52,25 @@ export default function ClvPage() {
                 The Link Between CLV and Churn
               </h3>
               <p>
-                CLV and customer churn are inversely related. When your{' '}
-                <strong>churn</strong> rate is high, your customer lifetime is short,
-                which drastically reduces your CLV. Conversely, by focusing on
-                strategies that reduce <strong>churn</strong>, you increase the
-                average customer lifespan, thereby maximizing their lifetime
-                value. This calculator demonstrates that relationship by
-                incorporating the monthly <strong>churn</strong> rate directly into the
-                CLV formula.
+                CLV and customer{' '}
+                <Link href="/churn-rate" className="text-primary font-semibold hover:underline">
+                  churn
+                </Link>{' '}
+                are inversely related. When your{' '}
+                <strong>
+                  <Link
+                    href="/churn-rate"
+                    className="text-primary font-semibold hover:underline"
+                  >
+                    churn rate
+                  </Link>
+                </strong>{' '}
+                is high, your customer lifetime is short, which drastically
+                reduces your CLV. Conversely, by focusing on strategies that
+                reduce <strong>churn</strong>, you increase the average customer
+                lifespan, thereby maximizing their lifetime value. This
+                calculator demonstrates that relationship by incorporating the
+                monthly <strong>churn</strong> rate directly into the CLV formula.
               </p>
             </div>
 
@@ -86,7 +102,14 @@ export default function ClvPage() {
               <ul className="list-disc list-inside space-y-2">
                 <li>
                   <strong>Smarter Spending:</strong> Knowing your CLV helps you
-                  define a reasonable Customer Acquisition Cost (CAC).
+                  define a reasonable{' '}
+                  <Link
+                    href="/ltv-cac-ratio"
+                    className="text-primary font-semibold hover:underline"
+                  >
+                    Customer Acquisition Cost (CAC)
+                  </Link>
+                  .
                 </li>
                 <li>
                   <strong>Identify Best Customers:</strong> Segment customers by
@@ -98,8 +121,8 @@ export default function ClvPage() {
                   <strong>churn</strong>.
                 </li>
                 <li>
-                  <strong>Improve Forecasting:</strong> Use CLV for more accurate
-                  long-term revenue projections.
+                  <strong>Improve Forecasting:</strong> Use CLV for more
+                  accurate long-term revenue projections.
                 </li>
               </ul>
             </div>

@@ -7,6 +7,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Customer Churn Risk Calculator',
@@ -32,13 +33,20 @@ export default function ChurnRiskPage() {
               </h3>
               <p>
                 Churn risk scoring is a proactive approach to identify which
-                customers are most likely to <strong>churn</strong>, or stop using
-                your service. Instead of waiting for customers to leave, this
-                model uses key behavioral and demographic data to assign a risk
-                score. This allows you to intervene with targeted retention
-                strategies before it&apos;s too late. It&apos;s a fundamental tool for
-                any business serious about reducing its customer{' '}
-                <strong>churn</strong> rate.
+                customers are most likely to{' '}
+                <Link href="/churn-rate" className="text-primary font-semibold hover:underline">
+                  churn
+                </Link>
+                , or stop using your service. Instead of waiting for customers
+                to leave, this model uses key behavioral and demographic data
+                to assign a risk score. This allows you to intervene with
+                targeted retention strategies before it&apos;s too late. It&apos;s a
+                fundamental tool for any business serious about reducing its
+                customer{' '}
+                <Link href="/churn-rate" className="text-primary font-semibold hover:underline">
+                  churn rate
+                </Link>
+                .
               </p>
             </div>
 
@@ -46,8 +54,8 @@ export default function ChurnRiskPage() {
               <h3 className="font-semibold text-lg mb-2">How to Use This Tool</h3>
               <p>
                 This calculator provides a simplified model for assessing{' '}
-                <strong>churn</strong> risk. Input the following data points for an
-                individual customer:
+                <strong>churn</strong> risk. Input the following data points
+                for an individual customer:
               </p>
               <ol className="list-decimal list-inside space-y-2 mt-2">
                 <li>
@@ -56,9 +64,9 @@ export default function ChurnRiskPage() {
                   <strong>churn</strong> risk.
                 </li>
                 <li>
-                  <strong>Usage Frequency:</strong> How often do they engage with
-                  your product? A drop in usage is a classic leading indicator
-                  of <strong>churn</strong>.
+                  <strong>Usage Frequency:</strong> How often do they engage
+                  with your product? A drop in usage is a classic leading
+                  indicator of <strong>churn</strong>.
                 </li>
                 <li>
                   <strong>Satisfaction Score (1-5):</strong> What was their
@@ -67,8 +75,8 @@ export default function ChurnRiskPage() {
                   <strong>churn</strong>.
                 </li>
                 <li>
-                  <strong>Support Tickets:</strong> How many support tickets have
-                  they filed recently? A high number can indicate either
+                  <strong>Support Tickets:</strong> How many support tickets
+                  have they filed recently? A high number can indicate either
                   frustration with the product or high engagement.
                 </li>
               </ol>
@@ -90,14 +98,25 @@ export default function ChurnRiskPage() {
                   most likely to leave.
                 </li>
                 <li>
-                  <strong>Improve Customer Experience:</strong> Understanding the
-                  drivers of <strong>churn</strong> helps you identify and fix
-                  common pain points in your product or service.
+                  <strong>Improve Customer Experience:</strong> Understanding
+                  the drivers of <strong>churn</strong> helps you identify and
+                  fix common pain points in your product or service.
                 </li>
                 <li>
                   <strong>Reduce Overall Churn Rate:</strong> By saving
                   individual customers, you directly improve your overall
-                  customer <strong>churn</strong> metric and increase revenue.
+                  customer{' '}
+                  <Link
+                    href="/customer-retention"
+                    className="text-primary font-semibold hover:underline"
+                  >
+                    retention
+                  </Link>{' '}
+                  and <strong>churn</strong> metrics, which also boosts{' '}
+                  <Link href="/clv" className="text-primary font-semibold hover:underline">
+                    Customer Lifetime Value
+                  </Link>
+                  .
                 </li>
               </ul>
             </div>

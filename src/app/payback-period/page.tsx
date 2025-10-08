@@ -7,6 +7,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'CAC Payback Period Calculator',
@@ -30,12 +31,15 @@ export default function PaybackPeriodPage() {
                 What is the CAC Payback Period?
               </h3>
               <p>
-                The Customer Acquisition Cost (CAC) Payback Period is the
-                number of months it takes for your company to earn back the
-                money it spent to acquire a new customer. A shorter payback
-                period means you can reinvest your money faster to fuel
-                growth, and it is a key metric for understanding the impact of
-                customer <strong>churn</strong> on your cash flow.
+                The Customer Acquisition Cost (CAC) Payback Period is the number
+                of months it takes for your company to earn back the money it
+                spent to acquire a new customer. A shorter payback period means
+                you can reinvest your money faster to fuel growth, and it is a
+                key metric for understanding the impact of customer{' '}
+                <Link href="/churn-rate" className="text-primary font-semibold hover:underline">
+                  churn
+                </Link>{' '}
+                on your cash flow.
               </p>
             </div>
             <div>
@@ -45,11 +49,19 @@ export default function PaybackPeriodPage() {
               <p>
                 Customer <strong>churn</strong> is a critical factor here. If a
                 customer churns before their payback period is over, you have
-                lost money on that acquisition. A high <strong>churn</strong> rate
+                lost money on that acquisition. A high{' '}
+                <strong>
+                  <Link
+                    href="/churn-rate"
+                    className="text-primary font-semibold hover:underline"
+                  >
+                    churn rate
+                  </Link>
+                </strong>{' '}
                 means fewer customers stick around long enough to become
-                profitable. Therefore, reducing <strong>churn</strong> is essential
-                not just for revenue, but for ensuring your acquisition
-                strategy is financially viable.
+                profitable. Therefore, reducing <strong>churn</strong> is
+                essential not just for revenue, but for ensuring your
+                acquisition strategy is financially viable.
               </p>
             </div>
             <div>
@@ -65,8 +77,7 @@ export default function PaybackPeriodPage() {
                 </li>
                 <li>
                   <strong>Gross Margin (%):</strong> Enter your gross margin
-                  percentage to account for the cost of servicing the
-                  customer.
+                  percentage to account for the cost of servicing the customer.
                 </li>
               </ol>
             </div>
@@ -87,8 +98,16 @@ export default function PaybackPeriodPage() {
                 </li>
                 <li>
                   <strong>Gauge Customer Profitability:</strong> Ensure your
-                  pricing and cost structures allow for profitable customer
-                  relationships.
+                  pricing and{' '}
+                  <strong>
+                    <Link
+                      href="/ltv-cac-ratio"
+                      className="text-primary font-semibold hover:underline"
+                    >
+                      LTV:CAC ratio
+                    </Link>
+                  </strong>{' '}
+                  allow for profitable customer relationships.
                 </li>
                 <li>
                   <strong>Highlight the Cost of Churn:</strong> A long payback

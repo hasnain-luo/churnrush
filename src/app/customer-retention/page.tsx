@@ -7,6 +7,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Customer Retention Rate Calculator',
@@ -32,12 +33,20 @@ export default function CustomerRetentionPage() {
               </h3>
               <p>
                 The Customer Retention Rate (CRR) measures the percentage of
-                existing customers who remain customers over a specific
-                period. It is the direct inverse of the customer{' '}
-                <strong>churn</strong> rate. While <strong>churn</strong> focuses on
-                how many customers you lose, retention focuses on how many you
-                keep. Tracking retention is essential for understanding
-                customer loyalty and the long-term viability of a business.
+                existing customers who remain customers over a specific period.
+                It is the direct inverse of the{' '}
+                <strong>
+                  <Link
+                    href="/churn-rate"
+                    className="text-primary font-semibold hover:underline"
+                  >
+                    customer churn rate
+                  </Link>
+                </strong>
+                . While <strong>churn</strong> focuses on how many customers you
+                lose, retention focuses on how many you keep. Tracking
+                retention is essential for understanding customer loyalty and
+                the long-term viability of a business.
               </p>
             </div>
 
@@ -91,7 +100,17 @@ export default function CustomerRetentionPage() {
                 </li>
                 <li>
                   <strong>Higher Lifetime Value:</strong> Loyal customers tend
-                  to spend more over time and are more likely to upgrade.
+                  to spend more over time and are more likely to upgrade,
+                  improving your{' '}
+                  <strong>
+                    <Link
+                      href="/clv"
+                      className="text-primary font-semibold hover:underline"
+                    >
+                      Customer Lifetime Value (CLV)
+                    </Link>
+                  </strong>
+                  .
                 </li>
                 <li>
                   <strong>Brand Advocacy:</strong> Happy, long-term customers

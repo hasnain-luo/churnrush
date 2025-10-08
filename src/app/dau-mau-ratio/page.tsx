@@ -7,6 +7,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'DAU/MAU Ratio Calculator for Product Stickiness',
@@ -33,10 +34,13 @@ export default function DauMauRatioPage() {
                 The Daily Active Users to Monthly Active Users (DAU/MAU) ratio
                 is a key metric for measuring the &quot;stickiness&quot; of your
                 product, which is a leading indicator of customer{' '}
-                <strong>churn</strong>. It shows what percentage of your monthly users engage
-                with your product on a daily basis. A higher ratio indicates
-                that your product is valuable and has become a regular part of
-                your users&apos; routine.
+                <Link href="/churn-rate" className="text-primary font-semibold hover:underline">
+                  churn
+                </Link>
+                . It shows what percentage of your monthly users engage with
+                your product on a daily basis. A higher ratio indicates that
+                your product is valuable and has become a regular part of your
+                users&apos; routine.
               </p>
             </div>
 
@@ -45,13 +49,29 @@ export default function DauMauRatioPage() {
                 How Stickiness Relates to Churn
               </h3>
               <p>
-                Product stickiness is a powerful antidote to customer{' '}
-                <strong>churn</strong>. When users are highly engaged and find
-                daily value in your product, they are far less likely to{' '}
-                <strong>churn</strong>. A low or declining DAU/MAU ratio can be
-                an early warning sign that users are losing interest, which
-                often precedes an increase in your <strong>churn</strong> rate.
-                Tracking this ratio helps you gauge user engagement long
+                Product stickiness is a powerful antidote to{' '}
+                <strong>
+                  <Link
+                    href="/customer-retention"
+                    className="text-primary font-semibold hover:underline"
+                  >
+                    customer churn
+                  </Link>
+                </strong>
+                . When users are highly engaged and find daily value in your
+                product, they are far less likely to <strong>churn</strong>. A
+                low or declining DAU/MAU ratio can be an early warning sign that
+                users are losing interest, which often precedes an increase in
+                your{' '}
+                <strong>
+                  <Link
+                    href="/churn-rate"
+                    className="text-primary font-semibold hover:underline"
+                  >
+                    churn rate
+                  </Link>
+                </strong>
+                . Tracking this ratio helps you gauge user engagement long
                 before they consider canceling.
               </p>
             </div>
@@ -86,8 +106,8 @@ export default function DauMauRatioPage() {
                   revenue.
                 </li>
                 <li>
-                  <strong>Validate Product Changes:</strong> See if new features
-                  or updates increase daily usage and stickiness.
+                  <strong>Validate Product Changes:</strong> See if new
+                  features or updates increase daily usage and stickiness.
                 </li>
                 <li>
                   <strong>Benchmark Performance:</strong> Compare your ratio to

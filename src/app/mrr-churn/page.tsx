@@ -7,6 +7,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'MRR Churn Rate Calculator (Gross & Net)',
@@ -32,8 +33,14 @@ export default function MrrChurnPage() {
               <p>
                 Monthly Recurring Revenue (MRR) Churn is a vital metric for
                 SaaS and subscription businesses, measuring the revenue lost
-                due to customer cancellations and downgrades. Unlike customer
-                churn, which only tracks the number of lost customers, MRR{' '}
+                due to customer cancellations and downgrades. Unlike{' '}
+                <Link
+                  href="/churn-rate"
+                  className="text-primary font-semibold hover:underline"
+                >
+                  customer churn
+                </Link>
+                , which only tracks the number of lost customers, MRR{' '}
                 <strong>churn</strong> quantifies the financial impact. This
                 calculator provides both Gross and Net MRR Churn rates to give
                 you a complete picture of your revenue momentum.
@@ -74,9 +81,15 @@ export default function MrrChurnPage() {
                   <strong>Net MRR Churn Rate:</strong> This shows the revenue
                   lost after factoring in expansion MRR from existing
                   customers. A negative Net MRR <strong>Churn</strong> Rate (often
-                  called Net Negative Churn) is the gold standard for SaaS, as
-                  it means your revenue is growing even without acquiring new
-                  customers.
+                  called{' '}
+                  <Link
+                    href="/net-revenue-churn"
+                    className="text-primary font-semibold hover:underline"
+                  >
+                    Net Negative Churn
+                  </Link>
+                  ) is the gold standard for SaaS, as it means your revenue is
+                  growing even without acquiring new customers.
                 </li>
               </ul>
             </div>

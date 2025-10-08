@@ -7,6 +7,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Net Revenue Churn Calculator (NDR)',
@@ -31,14 +32,22 @@ export default function NetRevenueChurnPage() {
                 What is Net Dollar Retention (NDR)?
               </h3>
               <p>
-                Net Dollar Retention (NDR), also known as Net Revenue Churn,
-                is a crucial metric that measures the percentage change in
-                revenue from a cohort of customers over a period, typically a
-                year. It accounts for all revenue changes, including{' '}
-                <strong>churn</strong> (lost revenue) and expansion (upgrades,
-                cross-sells). An NDR over 100% indicates that your business is
-                growing from its existing customer base alone, a powerful sign
-                of a healthy, scalable SaaS company.
+                Net Dollar Retention (NDR), also known as Net Revenue Churn, is
+                a crucial metric that measures the percentage change in revenue
+                from a cohort of customers over a period, typically a year. It
+                accounts for all revenue changes, including{' '}
+                <strong>
+                  <Link
+                    href="/mrr-churn"
+                    className="text-primary font-semibold hover:underline"
+                  >
+                    churn
+                  </Link>
+                </strong>{' '}
+                (lost revenue) and expansion (upgrades, cross-sells). An NDR
+                over 100% indicates that your business is growing from its
+                existing customer base alone, a powerful sign of a healthy,
+                scalable SaaS company.
               </p>
             </div>
 
@@ -47,13 +56,22 @@ export default function NetRevenueChurnPage() {
                 Going Beyond Standard Churn Metrics
               </h3>
               <p>
-                While customer <strong>churn</strong> tells you how many customers
-                you lost, NDR tells you the net financial impact. For example,
-                you could lose 10 small customers but have one large customer
-                double their spending. Your customer <strong>churn</strong> rate
-                would look bad, but your NDR would be healthy, showing your
-                business is actually in a strong position. It provides a more
-                sophisticated view of customer health and revenue momentum.
+                While{' '}
+                <strong>
+                  <Link
+                    href="/churn-rate"
+                    className="text-primary font-semibold hover:underline"
+                  >
+                    customer churn
+                  </Link>
+                </strong>{' '}
+                tells you how many customers you lost, NDR tells you the net
+                financial impact. For example, you could lose 10 small customers
+                but have one large customer double their spending. Your customer{' '}
+                <strong>churn</strong> rate would look bad, but your NDR would be
+                healthy, showing your business is actually in a strong
+                position. It provides a more sophisticated view of customer
+                health and revenue momentum.
               </p>
             </div>
 

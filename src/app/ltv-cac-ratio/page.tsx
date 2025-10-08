@@ -7,6 +7,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'LTV:CAC Ratio Calculator',
@@ -31,12 +32,16 @@ export default function LtvCacRatioPage() {
               </h3>
               <p>
                 The Lifetime Value to Customer Acquisition Cost (LTV:CAC) ratio
-                is a critical SaaS metric that compares the value of a
-                customer over their lifetime to the cost of acquiring them. It
-                answers a fundamental question: Are you spending your money
-                wisely to acquire customers who will not <strong>churn</strong>? A healthy ratio is a strong
-                indicator of a company&apos;s profitability, scalability, and the
-                effectiveness of its marketing and sales engine.
+                is a critical SaaS metric that compares the value of a customer
+                over their lifetime to the cost of acquiring them. It answers a
+                fundamental question: Are you spending your money wisely to
+                acquire customers who will not{' '}
+                <Link href="/churn-rate" className="text-primary font-semibold hover:underline">
+                  churn
+                </Link>
+                ? A healthy ratio is a strong indicator of a company&apos;s
+                profitability, scalability, and the effectiveness of its
+                marketing and sales engine.
               </p>
             </div>
 
@@ -45,12 +50,38 @@ export default function LtvCacRatioPage() {
                 Why is This Ratio Important for Churn?
               </h3>
               <p>
-                Your <strong>churn</strong> rate directly impacts your LTV. If{' '}
-                <strong>churn</strong> is high, LTV plummets, and your LTV:CAC
-                ratio will suffer. It might mean you are spending too much to
-                acquire customers who do not stick around long enough to become
-                profitable. Monitoring this ratio helps justify investments in
-                retention, as even a small decrease in <strong>churn</strong> can
+                Your{' '}
+                <strong>
+                  <Link
+                    href="/churn-rate"
+                    className="text-primary font-semibold hover:underline"
+                  >
+                    churn rate
+                  </Link>
+                </strong>{' '}
+                directly impacts your{' '}
+                <strong>
+                  <Link
+                    href="/clv"
+                    className="text-primary font-semibold hover:underline"
+                  >
+                    LTV
+                  </Link>
+                </strong>
+                . If <strong>churn</strong> is high, LTV plummets, and your
+                LTV:CAC ratio will suffer. It might mean you are spending too
+                much to acquire customers who do not stick around long enough to
+                become profitable. Monitoring this ratio helps justify
+                investments in{' '}
+                <strong>
+                  <Link
+                    href="/customer-retention"
+                    className="text-primary font-semibold hover:underline"
+                  >
+                    retention
+                  </Link>
+                </strong>
+                , as even a small decrease in <strong>churn</strong> can
                 significantly improve LTV and the overall health of the ratio.
               </p>
             </div>
@@ -61,12 +92,31 @@ export default function LtvCacRatioPage() {
                 <li>
                   <strong>Customer Lifetime Value (LTV) ($):</strong> Enter the
                   total predicted revenue from a single customer. You can use
-                  our CLV calculator to find this value.
+                  our{' '}
+                  <strong>
+                    <Link
+                      href="/clv"
+                      className="text-primary font-semibold hover:underline"
+                    >
+                      CLV calculator
+                    </Link>
+                  </strong>{' '}
+                  to find this value.
                 </li>
                 <li>
                   <strong>Customer Acquisition Cost (CAC) ($):</strong> Input
                   your total cost to acquire one new customer (sales and
-                  marketing spend / number of new customers).
+                  marketing spend / number of new customers). You can calculate
+                  this using our{' '}
+                  <strong>
+                    <Link
+                      href="/payback-period"
+                      className="text-primary font-semibold hover:underline"
+                    >
+                      Payback Period
+                    </Link>
+                  </strong>{' '}
+                  calculator.
                 </li>
               </ol>
             </div>
@@ -88,9 +138,9 @@ export default function LtvCacRatioPage() {
                   sustainable ratio for most SaaS businesses.
                 </li>
                 <li>
-                  <strong>5:1 or higher:</strong> You have a very strong business
-                  model and could likely afford to invest more in acquisition
-                  to grow faster.
+                  <strong>5:1 or higher:</strong> You have a very strong
+                  business model and could likely afford to invest more in
+                  acquisition to grow faster.
                 </li>
               </ul>
             </div>
