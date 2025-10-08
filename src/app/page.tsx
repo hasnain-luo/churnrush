@@ -1,7 +1,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Calculator, UserCheck, Wallet } from 'lucide-react';
+import { ArrowRight, Calculator, UserCheck, Wallet, TrendingDown, Ratio, Clock, Users } from 'lucide-react';
 import Link from 'next/link';
 
 const tools = [
@@ -23,6 +23,30 @@ const tools = [
     href: '/churn-risk',
     icon: <UserCheck className="size-8 text-primary" />,
   },
+  {
+    title: 'MRR Churn Rate',
+    description: 'Calculate your Gross and Net Monthly Recurring Revenue churn rates.',
+    href: '/mrr-churn',
+    icon: <TrendingDown className="size-8 text-primary" />,
+  },
+  {
+    title: 'LTV:CAC Ratio',
+    description: 'Calculate the ratio of Customer Lifetime Value to Customer Acquisition Cost.',
+    href: '/ltv-cac-ratio',
+    icon: <Ratio className="size-8 text-primary" />,
+  },
+  {
+    title: 'Payback Period',
+    description: 'Calculate how many months it takes to recover the cost of acquiring a customer.',
+    href: '/payback-period',
+    icon: <Clock className="size-8 text-primary" />,
+  },
+  {
+    title: 'DAU/MAU Ratio',
+    description: 'Calculate the ratio of Daily Active Users to Monthly Active Users to measure product stickiness.',
+    href: '/dau-mau-ratio',
+    icon: <Users className="size-8 text-primary" />,
+  }
 ];
 
 export default function Home() {
