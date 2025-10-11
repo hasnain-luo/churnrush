@@ -19,7 +19,9 @@ const blogPosts = [
         title: 'Customer Retention Management: The Ultimate 2025 Playbook for Sustainable Growth',
         description: 'A complete guide to customer retention strategies, metrics, and programs to drive sustainable growth for your business in 2025 and beyond.',
         href: '/blog/customer-retention-management-playbook',
-        date: 'October 2024',
+        author: 'Olivia Chen',
+        date: 'October 26, 2024',
+        readingTime: '12 min read',
         imageUrl: blogImage?.imageUrl || 'https://picsum.photos/seed/blog1/600/400',
         imageHint: blogImage?.imageHint || 'growth abstract',
     }
@@ -54,7 +56,13 @@ export default function BlogPage() {
                                 {post.title}
                             </Link>
                         </CardTitle>
-                        <p className="text-sm text-muted-foreground pt-2">{post.date}</p>
+                        <div className="text-sm text-muted-foreground pt-2 flex items-center gap-2 flex-wrap">
+                            <span>{post.author}</span>
+                            <span className="hidden sm:inline">&middot;</span>
+                            <span>{post.date}</span>
+                            <span className="hidden sm:inline">&middot;</span>
+                            <span>{post.readingTime}</span>
+                        </div>
                         <CardContent className="p-0 pt-4 flex-grow">
                             <CardDescription>{post.description}</CardDescription>
                         </CardContent>

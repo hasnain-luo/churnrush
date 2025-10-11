@@ -17,6 +17,13 @@ export default function BlogPostPage() {
             <CardTitle className="font-headline text-3xl md:text-4xl leading-tight">
               Customer Retention Management: The Ultimate 2025 Playbook for Sustainable Growth
             </CardTitle>
+            <div className="text-sm text-muted-foreground pt-4 flex items-center gap-2">
+                <span>By Olivia Chen</span>
+                <span>&middot;</span>
+                <span>October 26, 2024</span>
+                <span>&middot;</span>
+                <span>12 min read</span>
+            </div>
           </CardHeader>
           <CardContent className="space-y-8 text-card-foreground/90 text-lg">
             <section>
@@ -39,7 +46,7 @@ export default function BlogPostPage() {
                 At its core, <strong>customer retention</strong> refers to a company&apos;s ability to retain its customers over a specified period. The <strong>customer retention meaning</strong> extends far beyond simple repeat purchases—it encompasses the entire lifecycle of strategies, processes, and interactions designed to maintain ongoing customer relationships.
               </p>
               <p className="mb-4">
-                The <strong>customer retention definition</strong> in business terms is: the set of actions a company takes to reduce customer defections and increase the lifetime value of its customer base. When we examine <strong>retention meaning in business</strong>, we see it&apos;s fundamentally about creating sustainable revenue streams through existing customers rather than constantly chasing new ones.
+                The <strong>customer retention definition</strong> in business terms is: the set of actions a company takes to reduce customer defections and increase the lifetime value of its customer base. When we examine <strong>retention meaning in business</strong>, we see it's fundamentally about creating sustainable revenue streams through existing customers rather than constantly chasing new ones.
               </p>
               <p className="mb-4"><strong>What does customer retention mean</strong> in practical terms? It means:</p>
               <ul className="list-disc list-inside space-y-2 mb-4">
