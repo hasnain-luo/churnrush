@@ -20,7 +20,7 @@ export default function BlogPostPage() {
             <div className="text-sm text-muted-foreground pt-4 flex items-center gap-2">
                 <span>By Olivia Chen</span>
                 <span>&middot;</span>
-                <span>October 26, 2024</span>
+                <span>October 12, 2025</span>
                 <span>&middot;</span>
                 <span>12 min read</span>
             </div>
@@ -165,7 +165,7 @@ export default function BlogPostPage() {
             <section>
                 <h2 className="font-headline text-2xl mb-4 font-semibold">Conclusion: From Playbook to Profit</h2>
                 <p className="mb-4">
-                    The question is no longer <strong>why is customer retention important</strong>, but rather how quickly you can implement these strategies to transform your business. The organizations that master <strong>customer retention management</strong> in 2025 will be those that thrive regardless of market conditions.
+                    The question is no longer <strong>why is customer retention is important</strong>, but rather how quickly you can implement these strategies to transform your business. The organizations that master <strong>customer retention management</strong> in 2025 will be those that thrive regardless of market conditions.
                 </p>
                 <p>
                     <strong>Your next step</strong>: Begin with a retention audit to understand your current performance. Identify one high-impact strategy from this playbook to implement in the next 30 days. Remember, retention is a journey, not a destination—but every step you take builds a stronger, more resilient business.

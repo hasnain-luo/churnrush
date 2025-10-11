@@ -20,7 +20,7 @@ const blogPosts = [
         description: 'A complete guide to customer retention strategies, metrics, and programs to drive sustainable growth for your business in 2025 and beyond.',
         href: '/blog/customer-retention-management',
         author: 'Olivia Chen',
-        date: 'October 26, 2024',
+        date: 'October 12, 2025',
         readingTime: '12 min read',
         imageUrl: blogImage?.imageUrl || 'https://picsum.photos/seed/blog1/600/400',
         imageHint: blogImage?.imageHint || 'growth abstract',
