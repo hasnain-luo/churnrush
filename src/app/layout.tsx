@@ -34,9 +34,9 @@ export default function RootLayout({
             <div className="flex-1"></div>
             <div className="flex-1 text-center">
               <Link href="/" className="inline-block">
-                <h1 className="text-4xl md:text-5xl font-bold font-headline text-white drop-shadow-xl transition-all duration-300 hover:drop-shadow-2xl hover:scale-105">
+                <div className="text-4xl md:text-5xl font-bold font-headline text-white drop-shadow-xl transition-all duration-300 hover:drop-shadow-2xl hover:scale-105">
                   ChurnRush
-                </h1>
+                </div>
               </Link>
             </div>
             <nav className="flex-1 flex justify-end gap-6 items-center">
