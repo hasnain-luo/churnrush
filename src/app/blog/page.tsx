@@ -18,7 +18,7 @@ const blogPosts = [
     {
         title: 'Customer Retention Management: The Ultimate 2025 Playbook for Sustainable Growth',
         description: 'A complete guide to customer retention strategies, metrics, and programs to drive sustainable growth for your business in 2025 and beyond.',
-        href: '/blog/customer-retention-management-playbook',
+        href: '/blog/customer-retention-management',
         author: 'Olivia Chen',
         date: 'October 26, 2024',
         readingTime: '12 min read',
@@ -81,3 +81,5 @@ export default function BlogPage() {
     </main>
   );
 }
+
+    
