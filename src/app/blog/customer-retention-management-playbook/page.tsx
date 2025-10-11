@@ -14,9 +14,9 @@ export default function BlogPostPage() {
       <article className="max-w-3xl mx-auto">
         <Card>
           <CardHeader>
-            <CardTitle className="font-headline text-3xl md:text-4xl leading-tight">
+            <h1 className="font-headline text-3xl md:text-4xl leading-tight font-bold">
               Customer Retention Management: The Ultimate 2025 Playbook for Sustainable Growth
-            </CardTitle>
+            </h1>
             <div className="text-sm text-muted-foreground pt-4 flex items-center gap-2">
                 <span>By Olivia Chen</span>
                 <span>&middot;</span>
@@ -27,7 +27,7 @@ export default function BlogPostPage() {
           </CardHeader>
           <CardContent className="space-y-8 text-card-foreground/90 text-lg">
             <section>
-              <h2 className="font-headline text-2xl mb-4">Introduction: Why Retention is the New Growth Engine in 2025</h2>
+              <h2 className="font-headline text-2xl mb-4 mt-4 font-semibold">Introduction: Why Retention is the New Growth Engine in 2025</h2>
               <p className="mb-4">
                 In today&apos;s hyper-competitive business landscape, acquiring new customers has become increasingly expensive and challenging. While many organizations continue to pour resources into acquisition strategies, the smartest businesses have shifted their focus to what truly drives sustainable growth: <strong>customer retention management</strong>.
               </p>
@@ -40,13 +40,13 @@ export default function BlogPostPage() {
             </section>
 
             <section>
-              <h2 className="font-headline text-2xl mb-4">Demystifying the Core: What is Customer Retention Management?</h2>
+              <h2 className="font-headline text-2xl mb-4 font-semibold">Demystifying the Core: What is Customer Retention Management?</h2>
               <h3 className="font-semibold text-xl mb-2">Beyond the Buzzword: The True Customer Retention Definition & Meaning</h3>
               <p className="mb-4">
                 At its core, <strong>customer retention</strong> refers to a company&apos;s ability to retain its customers over a specified period. The <strong>customer retention meaning</strong> extends far beyond simple repeat purchases—it encompasses the entire lifecycle of strategies, processes, and interactions designed to maintain ongoing customer relationships.
               </p>
               <p className="mb-4">
-                The <strong>customer retention definition</strong> in business terms is: the set of actions a company takes to reduce customer defections and increase the lifetime value of its customer base. When we examine <strong>retention meaning in business</strong>, we see it's fundamentally about creating sustainable revenue streams through existing customers rather than constantly chasing new ones.
+                The <strong>customer retention definition</strong> in business terms is: the set of actions a company takes to reduce customer defections and increase the lifetime value of its customer base. When we examine <strong>retention meaning in business</strong>, we see it&apos;s fundamentally about creating sustainable revenue streams through existing customers rather than constantly chasing new ones.
               </p>
               <p className="mb-4"><strong>What does customer retention mean</strong> in practical terms? It means:</p>
               <ul className="list-disc list-inside space-y-2 mb-4">
@@ -78,7 +78,7 @@ export default function BlogPostPage() {
             </section>
 
             <section>
-              <h2 className="font-headline text-2xl mb-4">The Non-Negotiable: Why Retention is Your #1 Profit Lever</h2>
+              <h2 className="font-headline text-2xl mb-4 font-semibold">The Non-Negotiable: Why Retention is Your #1 Profit Lever</h2>
               <p className="mb-4">
                 Understanding <strong>why customer retention is important</strong> begins with recognizing the fundamental economics of business growth. While acquisition focuses on filling the top of the funnel, retention plugs the leaks at the bottom, creating a more efficient and sustainable growth model.
               </p>
@@ -102,7 +102,7 @@ export default function BlogPostPage() {
             </section>
 
             <section>
-              <h2 className="font-headline text-2xl mb-4">Building the Foundation: Essential Customer Retention Strategies</h2>
+              <h2 className="font-headline text-2xl mb-4 font-semibold">Building the Foundation: Essential Customer Retention Strategies</h2>
               <h3 className="font-semibold text-xl mb-2">Strategy 1: Deliver Exceptional Value Beyond the Product</h3>
               <p className="mb-4">Successful <strong>customer retention strategies</strong> begin with delivering value that extends beyond the core product or service. This means understanding and addressing the complete customer journey and pain points.</p>
               <p className="mb-4">Key components include:</p>
@@ -138,7 +138,7 @@ export default function BlogPostPage() {
             </section>
             
             <section>
-                <h2 className="font-headline text-2xl mb-4">Putting It All Together: Your 2025 Retention Action Plan</h2>
+                <h2 className="font-headline text-2xl mb-4 font-semibold">Putting It All Together: Your 2025 Retention Action Plan</h2>
                 <p className="mb-4">Transforming your approach to <strong>customer retention management</strong> requires a systematic implementation plan. Follow these steps to build your retention-first organization:</p>
                 <ol className="list-decimal list-inside space-y-4">
                     <li>
@@ -163,7 +163,7 @@ export default function BlogPostPage() {
             </section>
 
             <section>
-                <h2 className="font-headline text-2xl mb-4">Conclusion: From Playbook to Profit</h2>
+                <h2 className="font-headline text-2xl mb-4 font-semibold">Conclusion: From Playbook to Profit</h2>
                 <p className="mb-4">
                     The question is no longer <strong>why is customer retention important</strong>, but rather how quickly you can implement these strategies to transform your business. The organizations that master <strong>customer retention management</strong> in 2025 will be those that thrive regardless of market conditions.
                 </p>
@@ -177,3 +177,5 @@ export default function BlogPostPage() {
     </main>
   );
 }
+
+    
