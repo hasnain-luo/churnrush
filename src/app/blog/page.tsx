@@ -4,11 +4,15 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export const metadata: Metadata = {
   title: 'Blog',
   description: 'The ChurnRush blog, featuring insights, tips, and strategies on how to reduce customer churn and grow your subscription business.',
 };
+
+const blogImage = PlaceHolderImages.find(p => p.id === 'blog-post-1');
 
 const blogPosts = [
     {
@@ -16,36 +20,52 @@ const blogPosts = [
         description: 'A complete guide to customer retention strategies, metrics, and programs to drive sustainable growth for your business in 2025 and beyond.',
         href: '/blog/customer-retention-management-playbook',
         date: 'October 2024',
+        imageUrl: blogImage?.imageUrl || 'https://picsum.photos/seed/blog1/600/400',
+        imageHint: blogImage?.imageHint || 'growth abstract',
     }
 ]
 
 export default function BlogPage() {
   return (
     <main className="flex-grow container mx-auto px-4 py-8">
-      <div className="max-w-3xl mx-auto space-y-8">
+      <div className="max-w-5xl mx-auto space-y-8">
         <div className="text-center mb-12">
             <h1 className="font-headline text-4xl font-bold">The ChurnRush Blog</h1>
         </div>
         
-        <div className="space-y-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {blogPosts.map((post) => (
-                 <Card key={post.href}>
-                    <CardHeader>
-                        <CardTitle className="font-headline text-2xl">
+                 <Card key={post.href} className="flex flex-col">
+                    <CardHeader className="p-0">
+                       <Link href={post.href} aria-label={post.title}>
+                        <Image 
+                            src={post.imageUrl} 
+                            alt={`Preview image for ${post.title}`}
+                            width={600}
+                            height={400}
+                            className="rounded-t-xl object-cover w-full aspect-[3/2]"
+                            data-ai-hint={post.imageHint}
+                        />
+                       </Link>
+                    </CardHeader>
+                    <div className="p-6 flex flex-col flex-grow">
+                        <CardTitle className="font-headline text-xl lg:text-2xl">
                             <Link href={post.href} className="hover:text-primary transition-colors">
                                 {post.title}
                             </Link>
                         </CardTitle>
-                        <p className="text-sm text-muted-foreground pt-1">{post.date}</p>
-                    </CardHeader>
-                    <CardContent>
-                        <CardDescription>{post.description}</CardDescription>
-                         <Button asChild variant="link" className="px-0 mt-4">
-                            <Link href={post.href}>
-                                Read More <ArrowRight className="ml-2 h-4 w-4" />
-                            </Link>
-                        </Button>
-                    </CardContent>
+                        <p className="text-sm text-muted-foreground pt-2">{post.date}</p>
+                        <CardContent className="p-0 pt-4 flex-grow">
+                            <CardDescription>{post.description}</CardDescription>
+                        </CardContent>
+                        <div className="mt-4">
+                             <Button asChild variant="link" className="px-0">
+                                <Link href={post.href}>
+                                    Read More <ArrowRight className="ml-2 h-4 w-4" />
+                                </Link>
+                            </Button>
+                        </div>
+                    </div>
                 </Card>
             ))}
         </div>
