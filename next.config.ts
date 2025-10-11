@@ -30,9 +30,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  devIndicators: {
-    buildActivity: false,
-  },
   // In a future major version of Next.js, you will need to explicitly configure
   // "allowedDevOrigins" in next.config to allow cross-origin requests.
   // The value below is based on the warning from the server logs.
