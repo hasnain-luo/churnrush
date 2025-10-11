@@ -25,7 +25,6 @@ export default function BlogPage() {
       <div className="max-w-3xl mx-auto space-y-8">
         <div className="text-center mb-12">
             <h1 className="font-headline text-4xl font-bold">The ChurnRush Blog</h1>
-            <p className="text-foreground mt-2 text-lg">Insights, tips, and strategies on how to reduce customer churn and grow your business.</p>
         </div>
         
         <div className="space-y-8">
