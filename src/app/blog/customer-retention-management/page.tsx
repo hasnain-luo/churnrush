@@ -38,14 +38,16 @@ export default function BlogPostPage() {
                 In today&apos;s hyper-competitive business landscape, acquiring new customers has become increasingly expensive and challenging. While many organizations continue to pour resources into acquisition strategies, the smartest businesses have shifted their focus to what truly drives sustainable growth: <strong>customer retention management</strong>.
               </p>
               {crmImage1 && (
-                <Image
-                    src={crmImage1.imageUrl}
-                    alt={crmImage1.description}
-                    width={600}
-                    height={400}
-                    className="rounded-xl object-cover w-full aspect-[3/2] my-8"
-                    data-ai-hint={crmImage1.imageHint}
-                />
+                <div className="my-8">
+                    <Image
+                        src={crmImage1.imageUrl}
+                        alt={crmImage1.description}
+                        width={600}
+                        height={400}
+                        className="rounded-xl object-cover w-full aspect-[3/2]"
+                        data-ai-hint={crmImage1.imageHint}
+                    />
+                </div>
               )}
               <p className="mb-4">
                 The numbers tell a compelling story: increasing customer retention rates by just 5% can boost profits by 25% to 95% (Harvard Business Review). Yet, despite these staggering statistics, approximately 44% of companies have a greater focus on customer acquisition over retention (Invesp).
@@ -218,14 +220,16 @@ export default function BlogPostPage() {
                 <h3 className="font-semibold text-xl mt-6 mb-2">Tactic 4: Harness Technology: Your Customer Retention System</h3>
                 <p className="mb-4">Modern <strong>customer retention systems</strong> leverage technology to automate processes, gather insights, and deliver personalized experiences at scale. The right <strong>software customer retention</strong> solution can transform your retention efforts.</p>
                 {crmImage2 && (
-                    <Image
-                        src={crmImage2.imageUrl}
-                        alt={crmImage2.description}
-                        width={600}
-                        height={400}
-                        className="rounded-xl object-cover w-full aspect-[3/2] my-8"
-                        data-ai-hint={crmImage2.imageHint}
-                    />
+                    <div className="my-8">
+                        <Image
+                            src={crmImage2.imageUrl}
+                            alt={crmImage2.description}
+                            width={600}
+                            height={400}
+                            className="rounded-xl object-cover w-full aspect-[3/2]"
+                            data-ai-hint={crmImage2.imageHint}
+                        />
+                    </div>
                 )}
                 <p className="mb-4">Key technology components include:</p>
                 <ul className="list-disc list-inside space-y-2 mb-4">
@@ -241,14 +245,16 @@ export default function BlogPostPage() {
                 <h2 className="font-headline text-2xl mb-4 font-semibold">Real-World Inspiration: Customer Retention Examples That Deliver</h2>
                 <p className="mb-4">Examining successful <strong>customer retention examples</strong> provides valuable insights into what works across different industries:</p>
                 {crmImage3 && (
-                    <Image
-                        src={crmImage3.imageUrl}
-                        alt={crmImage3.description}
-                        width={600}
-                        height={400}
-                        className="rounded-xl object-cover w-full aspect-[3/2] my-8"
-                        data-ai-hint={crmImage3.imageHint}
-                    />
+                    <div className="my-8">
+                        <Image
+                            src={crmImage3.imageUrl}
+                            alt={crmImage3.description}
+                            width={600}
+                            height={400}
+                            className="rounded-xl object-cover w-full aspect-[3/2]"
+                            data-ai-hint={crmImage3.imageHint}
+                        />
+                    </div>
                 )}
                 
                 <h3 className="font-semibold text-xl mb-2">SaaS Example: HubSpot</h3>
