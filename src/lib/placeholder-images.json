@@ -9,19 +9,19 @@
     {
       "id": "blog-post-crm-1",
       "description": "An image for the introduction section of the Customer Retention Management blog post.",
-      "imageUrl": "/images/customer-retention-intro.jpg",
+      "imageUrl": "/images/ritnge.webp",
       "imageHint": "business strategy"
     },
     {
       "id": "blog-post-crm-2",
       "description": "An image for the technology section of the Customer Retention Management blog post.",
-      "imageUrl": "/images/customer-retention-system.jpg",
+      "imageUrl": "/images/crs.webp",
       "imageHint": "technology system"
     },
     {
       "id": "blog-post-crm-3",
       "description": "An image for the examples section of the Customer Retention Management blog post.",
-      "imageUrl": "/images/customer-retention-examples.jpg",
+      "imageUrl": "/images/cre.webp",
       "imageHint": "customer success"
     },
     {
