@@ -5,6 +5,24 @@
       "description": "Abstract image representing sustainable growth and customer retention.",
       "imageUrl": "https://picsum.photos/seed/blog1/600/400",
       "imageHint": "growth abstract"
+    },
+    {
+      "id": "blog-post-crm-1",
+      "description": "An image for the introduction section of the Customer Retention Management blog post.",
+      "imageUrl": "https://picsum.photos/seed/crm1/600/400",
+      "imageHint": "business strategy"
+    },
+    {
+      "id": "blog-post-crm-2",
+      "description": "An image for the technology section of the Customer Retention Management blog post.",
+      "imageUrl": "https://picsum.photos/seed/crm2/600/400",
+      "imageHint": "technology system"
+    },
+    {
+      "id": "blog-post-crm-3",
+      "description": "An image for the examples section of the Customer Retention Management blog post.",
+      "imageUrl": "https://picsum.photos/seed/crm3/600/400",
+      "imageHint": "customer success"
     }
   ]
 }
