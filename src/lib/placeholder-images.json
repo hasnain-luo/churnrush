@@ -9,20 +9,26 @@
     {
       "id": "blog-post-crm-1",
       "description": "An image for the introduction section of the Customer Retention Management blog post.",
-      "imageUrl": "https://picsum.photos/seed/crm1/600/400",
+      "imageUrl": "/images/customer-retention-intro.jpg",
       "imageHint": "business strategy"
     },
     {
       "id": "blog-post-crm-2",
       "description": "An image for the technology section of the Customer Retention Management blog post.",
-      "imageUrl": "https://picsum.photos/seed/crm2/600/400",
+      "imageUrl": "/images/customer-retention-system.jpg",
       "imageHint": "technology system"
     },
     {
       "id": "blog-post-crm-3",
       "description": "An image for the examples section of the Customer Retention Management blog post.",
-      "imageUrl": "https://picsum.photos/seed/crm3/600/400",
+      "imageUrl": "/images/customer-retention-examples.jpg",
       "imageHint": "customer success"
+    },
+    {
+      "id": "sample-post-1",
+      "description": "A placeholder image for the sample blog post.",
+      "imageUrl": "/images/sample-post.jpg",
+      "imageHint": "abstract placeholder"
     }
   ]
 }
