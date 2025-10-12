@@ -3,32 +3,26 @@
     {
       "id": "blog-post-1",
       "description": "Abstract image representing sustainable growth and customer retention.",
-      "imageUrl": "https://picsum.photos/seed/blog1/600/400",
+      "imageUrl": "/images/customer-retention-intro.webp",
       "imageHint": "growth abstract"
     },
     {
       "id": "blog-post-crm-1",
       "description": "An image for the introduction section of the Customer Retention Management blog post.",
-      "imageUrl": "/images/retention-new-growth-engn.webp",
+      "imageUrl": "/images/customer-retention-intro.webp",
       "imageHint": "business strategy"
     },
     {
       "id": "blog-post-crm-2",
       "description": "An image for the technology section of the Customer Retention Management blog post.",
-      "imageUrl": "/images/customer-retention-systm.webp",
+      "imageUrl": "/images/customer-retention-system.webp",
       "imageHint": "technology system"
     },
     {
       "id": "blog-post-crm-3",
       "description": "An image for the examples section of the Customer Retention Management blog post.",
-      "imageUrl": "/images/customer-retention-exampl.webp",
+      "imageUrl": "/images/customer-retention-examples.webp",
       "imageHint": "customer success"
-    },
-    {
-      "id": "sample-post-1",
-      "description": "A placeholder image for the sample blog post.",
-      "imageUrl": "/images/sample-post.jpg",
-      "imageHint": "abstract placeholder"
     }
   ]
 }

@@ -4,6 +4,9 @@ import './globals.css';
 import { cn } from '@/lib/utils';
 import { Toaster } from '@/components/ui/toaster';
 import Link from 'next/link';
+import { Menu } from 'lucide-react';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Button } from '@/components/ui/button';
 
 export const metadata: Metadata = {
   title: {
@@ -31,7 +34,30 @@ export default function RootLayout({
       <body className={cn('font-body antialiased flex flex-col min-h-screen bg-background')}>
         <header className="py-6">
           <div className="container mx-auto px-4 flex justify-between items-center">
-            <div className="flex-1"></div>
+            <div className="flex-1 md:hidden">
+              <Sheet>
+                <SheetTrigger asChild>
+                  <Button variant="ghost" size="icon">
+                    <Menu className="h-6 w-6 text-white" />
+                    <span className="sr-only">Open menu</span>
+                  </Button>
+                </SheetTrigger>
+                <SheetContent side="left" className="bg-background w-3/4">
+                  <nav className="flex flex-col gap-6 pt-10">
+                    <Link href="/about" className="text-white/80 hover:text-white text-lg">
+                      About
+                    </Link>
+                    <Link href="/blog" className="text-white/80 hover:text-white text-lg">
+                      Blog
+                    </Link>
+                    <Link href="/contact" className="text-white/80 hover:text-white text-lg">
+                      Contact
+                    </Link>
+                  </nav>
+                </SheetContent>
+              </Sheet>
+            </div>
+            <div className="flex-1 hidden md:flex"></div>
             <div className="flex-1 text-center">
               <Link href="/" className="inline-block">
                 <div className="text-4xl md:text-5xl font-bold font-headline text-white drop-shadow-xl transition-all duration-300 hover:drop-shadow-2xl hover:scale-105">
@@ -39,7 +65,7 @@ export default function RootLayout({
                 </div>
               </Link>
             </div>
-            <nav className="flex-1 flex justify-end gap-6 items-center">
+            <nav className="flex-1 hidden md:flex justify-end gap-6 items-center">
               <Link href="/about" className="text-white/80 hover:text-white hover:underline transition-colors">
                 About
               </Link>
@@ -50,6 +76,7 @@ export default function RootLayout({
                 Contact
               </Link>
             </nav>
+             <div className="flex-1 md:hidden"></div>
           </div>
         </header>
 
