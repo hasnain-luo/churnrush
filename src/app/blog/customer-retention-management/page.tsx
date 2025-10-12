@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Customer Retention Management: The Ultimate 2025 Playbook for Sustainable Growth',
+  title: 'Customer Retention Management: 2025 Growth Playbook',
   description: 'Master customer retention management in 2025. Discover proven strategies and actionable tactics to boost loyalty, increase profits & drive sustainable growth.',
 };
 
@@ -15,7 +15,7 @@ export default function BlogPostPage() {
         <Card>
           <CardHeader>
             <h1 className="font-headline text-3xl md:text-4xl leading-tight font-bold">
-              Customer Retention Management: The Ultimate 2025 Playbook for Sustainable Growth
+              Customer Retention Management: 2025 Growth Playbook
             </h1>
             <div className="text-sm text-muted-foreground pt-4 flex items-center gap-2">
                 <span>By Olivia Chen</span>

@@ -16,7 +16,7 @@ const blogImage = PlaceHolderImages.find(p => p.id === 'blog-post-1');
 
 const blogPosts = [
     {
-        title: 'Customer Retention Management: The Ultimate 2025 Playbook for Sustainable Growth',
+        title: 'Customer Retention Management: 2025 Growth Playbook',
         description: 'A complete guide to customer retention strategies, metrics, and programs to drive sustainable growth for your business in 2025 and beyond.',
         href: '/blog/customer-retention-management',
         author: 'Olivia Chen',
