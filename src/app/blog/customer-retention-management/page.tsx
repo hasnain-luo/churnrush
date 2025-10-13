@@ -50,7 +50,7 @@ export default function BlogPostPage() {
                 </div>
               )}
               <p className="mb-4">
-                The numbers tell a compelling story: increasing customer retention rates by just 5% can boost profits by 25% to 95% (Harvard Business Review). Yet, despite these staggering statistics, approximately 44% of companies have a greater focus on customer acquisition over retention (Invesp).
+                The numbers tell a compelling story: increasing customer retention rates by just 5% can boost profits by 25% to 95% (<a href="https://hbr.org/2014/10/the-value-of-keeping-the-right-customers" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Harvard Business Review</a>). Yet, despite these staggering statistics, approximately 44% of companies have a greater focus on customer acquisition over retention (<a href="https://www.invespcro.com/blog/customer-acquisition-retention/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Invesp</a>).
               </p>
               <p>
                 This comprehensive playbook will transform how you approach customer relationships. We&apos;ll move beyond theoretical concepts to deliver actionable strategies, proven tactics, and real-world examples that will help you build a retention-first organization capable of weathering market shifts and outperforming competitors. Whether you&apos;re in SaaS, e-commerce, or professional services, these principles will help you turn one-time buyers into lifelong advocates.
@@ -98,7 +98,7 @@ export default function BlogPostPage() {
 
                 <h3 className="font-semibold text-xl mt-6 mb-2">The Critical Link: How Customer Service Fuels Retention</h3>
                 <p className="mb-4">
-                    The connection between <strong>customer service and retention</strong> cannot be overstated. Research shows that 89% of consumers begin doing business with a competitor following a poor customer experience (Qualtrics). 
+                    The connection between <strong>customer service and retention</strong> cannot be overstated. Research shows that 89% of consumers begin doing business with a competitor following a poor customer experience (<a href="https://www.qualtrics.com/experience-management/customer/customer-service-stats/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Qualtrics</a>). 
                 </p>
                 <p className="mb-4">
                     <strong>Customer service and customer retention</strong> are intrinsically linked through:
@@ -128,9 +128,9 @@ export default function BlogPostPage() {
               </p>
               <p className="mb-4">Consider these compelling statistics:</p>
               <ul className="list-disc list-inside space-y-2 mb-4">
-                <li>The probability of selling to an existing customer is 60-70%, while the probability of selling to a new prospect is 5-20% (Marketing Metrics)</li>
-                <li>Existing customers are 50% more likely to try new products and spend 31% more than new customers (Bain & Company)</li>
-                <li>A 10% increase in customer retention levels results in a 30% increase in the value of the company (Bain & Company)</li>
+                <li>The probability of selling to an existing customer is 60-70%, while the probability of selling to a new prospect is 5-20% (<a href="https://www.forbes.com/sites/alexlawrence/2012/11/01/five-customer-retention-tips-for-entrepreneurs/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Marketing Metrics</a>)</li>
+                <li>Existing customers are 50% more likely to try new products and spend 31% more than new customers (<a href="https://media.bain.com/bainweb/media/19054/prescription_for_cutting_costs.pdf" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Bain & Company</a>)</li>
+                <li>A 10% increase in customer retention levels results in a 30% increase in the value of the company (<a href="https://media.bain.com/bainweb/media/19054/prescription_for_cutting_costs.pdf" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Bain & Company</a>)</li>
               </ul>
               <p className="mb-4">The <strong>retention meaning in business</strong> extends beyond immediate revenue to include:</p>
               <ul className="list-disc list-inside space-y-2 mb-4">
