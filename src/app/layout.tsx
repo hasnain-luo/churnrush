@@ -9,6 +9,7 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://churnrush.com'),
   title: {
     default: 'ChurnRush: Free Churn & SaaS Metric Calculators',
     template: '%s | ChurnRush',

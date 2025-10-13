@@ -1,12 +1,12 @@
 import { MetadataRoute } from 'next';
-
-const URL = 'https://churnrush.com';
+import { metadata } from './layout';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
     '',
     '/about',
     '/blog',
+    '/blog/customer-retention-management',
     '/contact',
     '/privacy-policy',
     '/terms-of-service',
@@ -21,8 +21,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/net-revenue-churn',
   ];
 
+  const url = metadata.metadataBase!;
+
   return routes.map((route) => ({
-    url: `${URL}${route}`,
+    url: new URL(route, url).toString(),
     lastModified: new Date(),
   }));
 }
