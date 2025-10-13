@@ -39,16 +39,17 @@ export default function BlogPostPage() {
                 In today&apos;s hyper-competitive business landscape, acquiring new customers has become increasingly expensive and challenging. While many organizations continue to pour resources into acquisition strategies, the smartest businesses have shifted their focus to what truly drives sustainable growth: <strong>customer retention management</strong>.
               </p>
               {crmImage1 && (
-                <div className="my-8">
+                <figure className="my-8">
                     <Image
                         src={crmImage1.imageUrl}
-                        alt={crmImage1.description}
+                        alt="A chart showing a rising arrow, symbolizing how effective customer retention management strategies lead to sustainable business growth."
                         width={600}
                         height={400}
                         className="rounded-xl object-cover w-full aspect-[3/2]"
                         data-ai-hint={crmImage1.imageHint}
                     />
-                </div>
+                    <figcaption className="text-center text-sm text-muted-foreground mt-2">Focusing on retention isn't just about reducing churn—it's the most reliable engine for sustainable growth.</figcaption>
+                </figure>
               )}
               <p className="mb-4">
                 The numbers tell a compelling story: increasing customer retention rates by just 5% can boost profits by 25% to 95% (<a href="https://hbr.org/2014/10/the-value-of-keeping-the-right-customers" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Harvard Business Review</a>). Yet, despite these staggering statistics, approximately 44% of companies have a greater focus on customer acquisition over retention (<a href="https://www.invespcro.com/blog/customer-acquisition-retention/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Invesp</a>).
@@ -239,16 +240,17 @@ export default function BlogPostPage() {
                 <h3 className="font-semibold text-xl mt-6 mb-2">Tactic 4: Harness Technology: Your Customer Retention System</h3>
                 <p className="mb-4">Modern <strong>customer retention systems</strong> leverage technology to automate processes, gather insights, and deliver personalized experiences at scale. The right <strong>software customer retention</strong> solution can transform your retention efforts.</p>
                 {crmImage2 && (
-                    <div className="my-8">
+                    <figure className="my-8">
                         <Image
                             src={crmImage2.imageUrl}
-                            alt={crmImage2.description}
+                            alt="A CRM dashboard on a laptop screen showing customer data analytics, which is a core part of a modern customer retention system."
                             width={600}
                             height={400}
                             className="rounded-xl object-cover w-full aspect-[3/2]"
                             data-ai-hint={crmImage2.imageHint}
                         />
-                    </div>
+                        <figcaption className="text-center text-sm text-muted-foreground mt-2">Technology like CRM platforms and analytics tools are essential for scaling retention efforts effectively.</figcaption>
+                    </figure>
                 )}
                 <p className="mb-4">Key technology components include:</p>
                 <ul className="list-disc list-inside space-y-2 mb-4">
@@ -264,16 +266,17 @@ export default function BlogPostPage() {
                 <h2 className="font-headline text-2xl mb-4 font-semibold">Real-World Inspiration: Customer Retention Examples That Deliver</h2>
                 <p className="mb-4">Examining successful <strong>customer retention examples</strong> provides valuable insights into what works across different industries:</p>
                 {crmImage3 && (
-                    <div className="my-8">
+                    <figure className="my-8">
                         <Image
                             src={crmImage3.imageUrl}
-                            alt={crmImage3.description}
+                            alt="Two smiling people shaking hands, representing successful customer retention examples from leading companies like HubSpot and Amazon."
                             width={600}
                             height={400}
                             className="rounded-xl object-cover w-full aspect-[3/2]"
                             data-ai-hint={crmImage3.imageHint}
                         />
-                    </div>
+                        <figcaption className="text-center text-sm text-muted-foreground mt-2">Real-world examples from brands like Chewy and HubSpot show that combining value with emotional connection builds loyalty.</figcaption>
+                    </figure>
                 )}
                 
                 <h3 className="font-semibold text-xl mb-2">SaaS Example: HubSpot</h3>
