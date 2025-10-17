@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/about',
     '/blog',
     '/blog/customer-retention-management',
+    '/blog/churn-meaning-in-business',
     '/contact',
     '/privacy-policy',
     '/terms-of-service',

@@ -12,7 +12,9 @@ export const metadata: Metadata = {
   description: 'The ChurnRush blog, featuring insights, tips, and strategies on how to reduce customer churn and grow your subscription business.',
 };
 
-const blogImage = PlaceHolderImages.find(p => p.id === 'blog-post-1');
+const blogImage1 = PlaceHolderImages.find(p => p.id === 'blog-post-1');
+const blogImage2 = PlaceHolderImages.find(p => p.id === 'blog-post-churn-meaning-1');
+
 
 const blogPosts = [
     {
@@ -22,8 +24,18 @@ const blogPosts = [
         author: 'Olivia Chen',
         date: 'October 12, 2025',
         readingTime: '12 min read',
-        imageUrl: blogImage?.imageUrl || 'https://picsum.photos/seed/blog1/600/400',
-        imageHint: blogImage?.imageHint || 'growth abstract',
+        imageUrl: blogImage1?.imageUrl || 'https://picsum.photos/seed/blog1/600/400',
+        imageHint: blogImage1?.imageHint || 'growth abstract',
+    },
+    {
+        title: 'Churn Meaning in Business: Calculate Customer Churn Like a Pro',
+        description: 'Master churn meaning in business & calculate customer churn accurately with our 2025 guide. Learn churn rate formulas, SaaS calculations & reduction strategies.',
+        href: '/blog/churn-meaning-in-business',
+        author: 'Alex Dawson',
+        date: 'October 26, 2025',
+        readingTime: '10 min read',
+        imageUrl: blogImage2?.imageUrl || 'https://picsum.photos/seed/blog2/600/400',
+        imageHint: blogImage2?.imageHint || 'business analysis',
     }
 ]
 

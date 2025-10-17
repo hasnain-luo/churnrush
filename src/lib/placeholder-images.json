@@ -23,6 +23,24 @@
       "description": "An image for the examples section of the Customer Retention Management blog post.",
       "imageUrl": "/images/customer-retention-examples.webp",
       "imageHint": "customer success"
+    },
+    {
+      "id": "blog-post-churn-meaning-1",
+      "description": "An image for the introduction section of the Churn Meaning in Business blog post.",
+      "imageUrl": "https://picsum.photos/seed/churn-meaning-1/600/400",
+      "imageHint": "business analysis"
+    },
+    {
+      "id": "blog-post-churn-meaning-2",
+      "description": "An image for the calculation section of the Churn Meaning in Business blog post.",
+      "imageUrl": "https://picsum.photos/seed/churn-meaning-2/600/400",
+      "imageHint": "formula calculation"
+    },
+    {
+      "id": "blog-post-churn-meaning-3",
+      "description": "An image for the reporting section of the Churn Meaning in Business blog post.",
+      "imageUrl": "https://picsum.photos/seed/churn-meaning-3/600/400",
+      "imageHint": "data dashboard"
     }
   ]
 }
