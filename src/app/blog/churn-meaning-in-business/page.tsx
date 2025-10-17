@@ -60,7 +60,7 @@ export default function BlogPostPage() {
                     <figure className="my-8">
                         <Image
                             src={churnMeaningImage1.imageUrl}
-                            alt="Water tank analogy showing customer churn rate calculation and financial impact"
+                            alt={churnMeaningImage1.description}
                             width={600}
                             height={400}
                             className="rounded-xl object-cover w-full aspect-[3/2]"
@@ -122,7 +122,7 @@ export default function BlogPostPage() {
                     <figure className="my-8">
                         <Image
                             src={churnMeaningImage2.imageUrl}
-                            alt="Step-by-step churn rate calculation formulas with example: customer churn, revenue churn, and net churn"
+                            alt={churnMeaningImage2.description}
                             width={600}
                             height={400}
                             className="rounded-xl object-cover w-full aspect-[3/2]"
@@ -216,7 +216,7 @@ export default function BlogPostPage() {
                     <figure className="my-8">
                         <Image
                             src={churnMeaningImage3.imageUrl}
-                            alt="Industry churn rate benchmarks: SaaS 10%, E-commerce 15%, Telecom 20%, Financial 8%, Subscription 25% with healthy/danger zones"
+                            alt={churnMeaningImage3.description}
                             width={600}
                             height={400}
                             className="rounded-xl object-cover w-full aspect-[3/2]"
@@ -344,3 +344,5 @@ export default function BlogPostPage() {
     </main>
   );
 }
+
+    
