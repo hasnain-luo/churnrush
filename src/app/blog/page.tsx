@@ -31,8 +31,8 @@ const blogPosts = [
         title: 'Churn Meaning in Business: Calculate Customer Churn Like a Pro',
         description: 'Master churn meaning in business & calculate customer churn accurately with our 2025 guide. Learn churn rate formulas, SaaS calculations & reduction strategies.',
         href: '/blog/churn-meaning-in-business',
-        author: 'Alex Dawson',
-        date: 'October 26, 2025',
+        author: 'Olivia Chen',
+        date: 'October 17, 2025',
         readingTime: '10 min read',
         imageUrl: blogImage2?.imageUrl || 'https://picsum.photos/seed/blog2/600/400',
         imageHint: blogImage2?.imageHint || 'business analysis',
@@ -93,5 +93,7 @@ export default function BlogPage() {
     </main>
   );
 }
+
+    
 
     
