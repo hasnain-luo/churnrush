@@ -26,20 +26,20 @@
     },
     {
       "id": "blog-post-churn-meaning-1",
-      "description": "An image for the introduction section of the Churn Meaning in Business blog post.",
-      "imageUrl": "https://picsum.photos/seed/churn-meaning-1/600/400",
+      "description": "Water tank analogy showing customer churn rate calculation and financial impact",
+      "imageUrl": "/images/171025/churn-rate-concept-visualization.webp",
       "imageHint": "business analysis"
     },
     {
       "id": "blog-post-churn-meaning-2",
-      "description": "An image for the calculation section of the Churn Meaning in Business blog post.",
-      "imageUrl": "https://picsum.photos/seed/churn-meaning-2/600/400",
+      "description": "Step-by-step churn rate calculation formulas with example: customer churn, revenue churn, and net churn",
+      "imageUrl": "/images/171025/churn-formula-breakdown-infographic.webp",
       "imageHint": "formula calculation"
     },
     {
       "id": "blog-post-churn-meaning-3",
-      "description": "An image for the reporting section of the Churn Meaning in Business blog post.",
-      "imageUrl": "https://picsum.photos/seed/churn-meaning-3/600/400",
+      "description": "Industry churn rate benchmarks: SaaS 10%, E-commerce 15%, Telecom 20%, Financial 8%, Subscription 25% with healthy/danger zones",
+      "imageUrl": "/images/171025/industry-churn-benchmark-comparison.webp",
       "imageHint": "data dashboard"
     }
   ]

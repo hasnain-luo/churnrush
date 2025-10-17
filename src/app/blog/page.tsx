@@ -54,7 +54,7 @@ export default function BlogPage() {
                        <Link href={post.href} aria-label={post.title}>
                         <Image 
                             src={post.imageUrl} 
-                            alt={`Preview image for ${post.title}`}
+                            alt={post.description}
                             width={600}
                             height={400}
                             className="rounded-t-xl object-cover w-full aspect-[3/2]"

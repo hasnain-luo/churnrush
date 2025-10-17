@@ -60,13 +60,13 @@ export default function BlogPostPage() {
                     <figure className="my-8">
                         <Image
                             src={churnMeaningImage1.imageUrl}
-                            alt="A magnifying glass focusing on the word 'CHURN' on a business report, symbolizing the importance of understanding churn meaning in business."
+                            alt="Water tank analogy showing customer churn rate calculation and financial impact"
                             width={600}
                             height={400}
                             className="rounded-xl object-cover w-full aspect-[3/2]"
                             data-ai-hint={churnMeaningImage1.imageHint}
                         />
-                        <figcaption className="text-center text-sm text-muted-foreground mt-2">Decoding the true meaning of churn is the first step toward managing it effectively.</figcaption>
+                        <figcaption className="text-center text-sm text-muted-foreground mt-2">Churn directly impacts revenue: A 5% monthly churn equals 46% annual customer loss</figcaption>
                     </figure>
                 )}
 
@@ -122,13 +122,13 @@ export default function BlogPostPage() {
                     <figure className="my-8">
                         <Image
                             src={churnMeaningImage2.imageUrl}
-                            alt="A calculator displaying the churn rate formula, representing the precision of churn calculation in business."
+                            alt="Step-by-step churn rate calculation formulas with example: customer churn, revenue churn, and net churn"
                             width={600}
                             height={400}
                             className="rounded-xl object-cover w-full aspect-[3/2]"
                             data-ai-hint={churnMeaningImage2.imageHint}
                         />
-                        <figcaption className="text-center text-sm text-muted-foreground mt-2">Using the right churn formula is key to gaining actionable business insights.</figcaption>
+                        <figcaption className="text-center text-sm text-muted-foreground mt-2">Progressive complexity: From basic customer count to revenue-adjusted churn metrics</figcaption>
                     </figure>
                 )}
                 
@@ -216,13 +216,13 @@ export default function BlogPostPage() {
                     <figure className="my-8">
                         <Image
                             src={churnMeaningImage3.imageUrl}
-                            alt="A dashboard showing churn reports and analytics, illustrating the process of turning churn calculation into business decisions."
+                            alt="Industry churn rate benchmarks: SaaS 10%, E-commerce 15%, Telecom 20%, Financial 8%, Subscription 25% with healthy/danger zones"
                             width={600}
                             height={400}
                             className="rounded-xl object-cover w-full aspect-[3/2]"
                             data-ai-hint={churnMeaningImage3.imageHint}
                         />
-                        <figcaption className="text-center text-sm text-muted-foreground mt-2">Effective churn reporting turns raw data into strategic actions that drive retention.</figcaption>
+                        <figcaption className="text-center text-sm text-muted-foreground mt-2">Industry benchmarks help contextualize your churn rate - SaaS requires different calculation than retail</figcaption>
                     </figure>
                 )}
                 <h3 className="font-semibold text-xl mb-2">Building an Effective Churn Report: Key Metrics to Track</h3>
