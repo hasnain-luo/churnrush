@@ -86,13 +86,13 @@ export default function BlogPostPage() {
                 <p className="mb-4">
                     The fundamental <strong><Link href="/churn-rate" className="text-primary hover:underline">churn rate formula</Link></strong> provides a straightforward way to quantify customer attrition:
                 </p>
-                <pre className="bg-muted p-4 rounded-md text-sm mb-4"><code>
+                <pre className="bg-muted p-4 rounded-md text-sm mb-4 whitespace-pre-wrap"><code>
                     Churn Rate = (Number of Customers Lost During Period ÷ Number of Customers at Start of Period) × 100
                 </code></pre>
                 <p className="mb-4">
                     This <strong>churn formula</strong> calculates the <strong>churn percentage</strong> of customers lost. For example, if you started Q1 with 1,000 customers and lost 50, your <strong>customer churn calculation</strong> would be:
                 </p>
-                 <pre className="bg-muted p-4 rounded-md text-sm mb-4"><code>
+                 <pre className="bg-muted p-4 rounded-md text-sm mb-4 whitespace-pre-wrap"><code>
                     (50 ÷ 1,000) × 100 = 5% quarterly churn
                 </code></pre>
                 <p className="mb-4">
@@ -104,14 +104,14 @@ export default function BlogPostPage() {
                     For deeper insights, businesses often use more nuanced versions of the <strong><Link href="/customer-retention" className="text-primary hover:underline">customer churn rate formula</Link></strong>:
                 </p>
                 <p className="font-semibold mb-2">Revenue Churn Rate:</p>
-                <pre className="bg-muted p-4 rounded-md text-sm mb-4"><code>
+                <pre className="bg-muted p-4 rounded-md text-sm mb-4 whitespace-pre-wrap"><code>
                     Revenue Churn = (Monthly Recurring Revenue Lost ÷ Monthly Recurring Revenue at Start of Month) × 100
                 </code></pre>
                 <p className="mb-4">
                     This <strong><Link href="/mrr-churn" className="text-primary hover:underline">customer churn rate calculation</Link></strong> is particularly valuable for SaaS and subscription businesses where customer value varies significantly. The <strong>churn calculation formula</strong> for revenue accounts for the fact that losing high-value customers impacts revenue more than losing low-value ones.
                 </p>
                 <p className="font-semibold mt-4 mb-2">Net Revenue Churn:</p>
-                <pre className="bg-muted p-4 rounded-md text-sm mb-4"><code>
+                <pre className="bg-muted p-4 rounded-md text-sm mb-4 whitespace-pre-wrap"><code>
                     Net Revenue Churn = [(Starting MRR - Ending MRR + Expansion MRR) ÷ Starting MRR] × 100
                 </code></pre>
                 <p className="mb-4">
@@ -137,20 +137,20 @@ export default function BlogPostPage() {
                     The frequency of your <strong>churn report</strong> depends on your business model and strategic needs:
                 </p>
                  <p className="font-semibold mb-2">Monthly Churn Calculation:</p>
-                <pre className="bg-muted p-4 rounded-md text-sm mb-4"><code>
+                <pre className="bg-muted p-4 rounded-md text-sm mb-4 whitespace-pre-wrap"><code>
                     Monthly Churn Rate = (Customers Lost in Month ÷ Customers at Start of Month) × 100
                 </code></pre>
                 <p className="mb-4">
                     <strong>Monthly churn</strong> is ideal for fast-moving industries like SaaS or mobile apps where customer behavior changes rapidly. It allows for quick response to retention issues.
                 </p>
                  <p className="font-semibold mt-4 mb-2">Annual Churn Calculation:</p>
-                <pre className="bg-muted p-4 rounded-md text-sm mb-4"><code>
+                <pre className="bg-muted p-4 rounded-md text-sm mb-4 whitespace-pre-wrap"><code>
                     Annual Churn Rate = (Customers Lost in Year ÷ Customers at Start of Year) × 100
                 </code></pre>
                 <p className="mb-4">
                     <strong>Annual churn calculation</strong> provides a broader view of customer retention trends and is useful for strategic planning. The <strong>annual churn rate formula</strong> can also be calculated by compounding monthly rates:
                 </p>
-                <pre className="bg-muted p-4 rounded-md text-sm mb-4"><code>
+                <pre className="bg-muted p-4 rounded-md text-sm mb-4 whitespace-pre-wrap"><code>
                     Annual Churn = 1 - (1 - Monthly Churn Rate)^12
                 </code></pre>
                 <p className="mb-4">
@@ -165,11 +165,11 @@ export default function BlogPostPage() {
                     Software-as-a-Service companies have unique churn characteristics that require specialized calculation approaches:
                 </p>
                 <p className="font-semibold mb-2">SaaS Customer Churn Rate:</p>
-                <pre className="bg-muted p-4 rounded-md text-sm mb-4"><code>
+                <pre className="bg-muted p-4 rounded-md text-sm mb-4 whitespace-pre-wrap"><code>
                     SaaS Churn Rate = (Customers Canceling Subscriptions in Period ÷ Total Customers at Start of Period) × 100
                 </code></pre>
                 <p className="font-semibold mt-4 mb-2">SaaS Revenue Churn:</p>
-                 <pre className="bg-muted p-4 rounded-md text-sm mb-4"><code>
+                 <pre className="bg-muted p-4 rounded-md text-sm mb-4 whitespace-pre-wrap"><code>
                     SaaS Revenue Churn = (MRR Lost from Churned Customers ÷ Starting MRR) × 100
                 </code></pre>
                 <p className="mb-4">
@@ -190,11 +190,11 @@ export default function BlogPostPage() {
                     E-commerce and subscription businesses face distinct churn challenges that require tailored approaches:
                 </p>
                 <p className="font-semibold mb-2">E-commerce Churn Rate:</p>
-                 <pre className="bg-muted p-4 rounded-md text-sm mb-4"><code>
+                 <pre className="bg-muted p-4 rounded-md text-sm mb-4 whitespace-pre-wrap"><code>
                    E-commerce Churn Rate = 1 - (Repeat Customers in Period ÷ Total Customers in Period)
                 </code></pre>
                  <p className="font-semibold mt-4 mb-2">Subscription Churn Rate:</p>
-                <pre className="bg-muted p-4 rounded-md text-sm mb-4"><code>
+                <pre className="bg-muted p-4 rounded-md text-sm mb-4 whitespace-pre-wrap"><code>
                     Subscription Churn Rate = (Subscriptions Canceled in Period ÷ Active Subscriptions at Start of Period) × 100
                 </code></pre>
                 <p className="mb-4">
@@ -344,5 +344,3 @@ export default function BlogPostPage() {
     </main>
   );
 }
-
-    
