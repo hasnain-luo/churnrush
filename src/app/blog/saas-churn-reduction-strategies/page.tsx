@@ -36,7 +36,7 @@ export default function BlogPostPage() {
           </CardHeader>
           <CardContent className="space-y-8 text-card-foreground/90 text-lg">
             <p>
-              In today&apos;s hyper-competitive SaaS landscape, where customer acquisition costs have risen 60% since 2020 (ProfitWell), <strong>churn reduction</strong> has become the ultimate profit lever. Yet 68% of SaaS companies still rely on reactive tactics rather than systematic <strong>churn prevention</strong> frameworks. This comprehensive playbook delivers the 2025 strategies top-performing SaaS companies use to <strong>reduce customer churn</strong> by up to 40% while increasing lifetime value by 3x.
+              In today&apos;s hyper-competitive SaaS landscape, where customer acquisition costs have risen 60% since 2020 (<a href="https://www.profitwell.com/recur/all/acquisition-cost-benchmarks" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">ProfitWell</a>), <strong>churn reduction</strong> has become the ultimate profit lever. Yet 68% of SaaS companies still rely on reactive tactics rather than systematic <strong>churn prevention</strong> frameworks. This comprehensive playbook delivers the 2025 strategies top-performing SaaS companies use to <strong>reduce customer churn</strong> by up to 40% while increasing lifetime value by 3x.
             </p>
 
             <div className="bg-secondary p-6 rounded-xl border border-border space-y-4">
@@ -79,7 +79,7 @@ export default function BlogPostPage() {
                 <strong>Churn prevention</strong> directly impacts your bottom line in ways acquisition cannot:
               </p>
               <ul className="list-disc list-inside space-y-2 mb-4">
-                <li>A 5% reduction in churn increases profits by 25-95% (Bain & Company)</li>
+                <li>A 5% reduction in churn increases profits by 25-95% (<a href="https://media.bain.com/bainweb/media/19054/prescription_for_cutting_costs.pdf" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Bain & Company</a>)</li>
                 <li>It costs 5x more to acquire new customers than retain existing ones</li>
                 <li>Existing customers are 50% more likely to try new products</li>
                 <li>Happy customers generate 2x more referrals</li>
