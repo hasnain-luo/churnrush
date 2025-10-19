@@ -79,7 +79,7 @@ export default function BlogPostPage() {
                 <strong>Churn prevention</strong> directly impacts your bottom line in ways acquisition cannot:
               </p>
               <ul className="list-disc list-inside space-y-2 mb-4">
-                <li>A 5% reduction in churn increases profits by 25-95% (<a href="https://media.bain.com/bainweb/media/19054/prescription_for_cutting_costs.pdf" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Bain & Company</a>)</li>
+                <li>A 5% reduction in churn increases profits by 25-95% (Bain & Company)</li>
                 <li>It costs 5x more to acquire new customers than retain existing ones</li>
                 <li>Existing customers are 50% more likely to try new products</li>
                 <li>Happy customers generate 2x more referrals</li>
@@ -87,19 +87,6 @@ export default function BlogPostPage() {
               <p>
                 <strong>Prevent customer churn</strong> effectively, and you transform your business from a leaky bucket to a growth engine.
               </p>
-               {saasChurnImage1 && (
-                <figure className="my-8">
-                    <Image
-                        src={saasChurnImage1.imageUrl}
-                        alt={saasChurnImage1.description}
-                        width={600}
-                        height={400}
-                        className="rounded-xl object-cover w-full aspect-[3/2]"
-                        data-ai-hint={saasChurnImage1.imageHint}
-                    />
-                    <figcaption className="text-center text-sm text-muted-foreground mt-2">{saasChurnImage1.caption}</figcaption>
-                </figure>
-              )}
             </section>
 
             <section>
@@ -129,6 +116,20 @@ export default function BlogPostPage() {
                     <li><strong>Intervention timing</strong>: Determining optimal retention touchpoints</li>
                 </ul>
                 <p>Companies using predictive <strong><Link href="/churn-risk" className="text-primary hover:underline">churn risk</Link></strong> systems reduce <strong>customer churn reduction</strong> costs by 35% while increasing intervention success rates by 2.4x.</p>
+                
+                {saasChurnImage1 && (
+                    <figure className="my-8">
+                        <Image
+                            src={saasChurnImage1.imageUrl}
+                            alt={saasChurnImage1.description}
+                            width={600}
+                            height={400}
+                            className="rounded-xl object-cover w-full aspect-[3/2]"
+                            data-ai-hint={saasChurnImage1.imageHint}
+                        />
+                        <figcaption className="text-center text-sm text-muted-foreground mt-2">{saasChurnImage1.caption}</figcaption>
+                    </figure>
+                )}
             </section>
             
             <section>
@@ -143,20 +144,6 @@ export default function BlogPostPage() {
                   <li><strong>Value demonstration</strong>: Quick wins showing ROI within 7 days</li>
               </ul>
               <p>SaaS companies optimizing onboarding <strong>reduce subscriber churn</strong> by 62% in the critical first 90 days.</p>
-
-              {saasChurnImage2 && (
-                  <figure className="my-8">
-                      <Image
-                          src={saasChurnImage2.imageUrl}
-                          alt={saasChurnImage2.description}
-                          width={600}
-                          height={400}
-                          className="rounded-xl object-cover w-full aspect-[3/2]"
-                          data-ai-hint={saasChurnImage2.imageHint}
-                      />
-                      <figcaption className="text-center text-sm text-muted-foreground mt-2">{saasChurnImage2.caption}</figcaption>
-                  </figure>
-              )}
 
               <h3 className="font-semibold text-xl mt-6 mb-2">Customer Health Scoring Systems</h3>
               <p className="mb-4">Implement a tiered health scoring model to <strong>decrease churn</strong>:</p>
@@ -173,6 +160,20 @@ export default function BlogPostPage() {
                   <li><strong>Relationship strength</strong>: Stakeholder engagement</li>
               </ul>
               <p>Companies with sophisticated health scoring <strong>reduce churn rate</strong> by 45% through targeted interventions.</p>
+              
+              {saasChurnImage2 && (
+                  <figure className="my-8">
+                      <Image
+                          src={saasChurnImage2.imageUrl}
+                          alt={saasChurnImage2.description}
+                          width={600}
+                          height={400}
+                          className="rounded-xl object-cover w-full aspect-[3/2]"
+                          data-ai-hint={saasChurnImage2.imageHint}
+                      />
+                      <figcaption className="text-center text-sm text-muted-foreground mt-2">{saasChurnImage2.caption}</figcaption>
+                  </figure>
+              )}
 
               <h3 className="font-semibold text-xl mt-6 mb-2">Personalized Engagement Tactics</h3>
               <p className="mb-4">2025&apos;s most effective <strong>churn prevention</strong> strategies leverage:</p>
@@ -197,20 +198,6 @@ export default function BlogPostPage() {
                   <li><strong>Industry verticals</strong>: Tailored approaches for different sectors</li>
               </ul>
               <p>Companies implementing granular segmentation <strong>reduce churn rate</strong> by focusing resources where they deliver maximum impact.</p>
-
-              {saasChurnImage3 && (
-                  <figure className="my-8">
-                      <Image
-                          src={saasChurnImage3.imageUrl}
-                          alt={saasChurnImage3.description}
-                          width={600}
-                          height={400}
-                          className="rounded-xl object-cover w-full aspect-[3/2]"
-                          data-ai-hint={saasChurnImage3.imageHint}
-                      />
-                      <figcaption className="text-center text-sm text-muted-foreground mt-2">{saasChurnImage3.caption}</figcaption>
-                  </figure>
-              )}
 
               <h3 className="font-semibold text-xl mt-6 mb-2">Feedback Loops That Reduce Attrition</h3>
               <p className="mb-4">Systematic feedback collection drives continuous <strong>churn mitigation</strong>:</p>
@@ -307,6 +294,21 @@ export default function BlogPostPage() {
 
             <section>
                 <h2 className="font-headline text-2xl mb-4 font-semibold">Conclusion: Your Churn Reduction Implementation Roadmap</h2>
+                
+                {saasChurnImage3 && (
+                    <figure className="my-8">
+                        <Image
+                            src={saasChurnImage3.imageUrl}
+                            alt={saasChurnImage3.description}
+                            width={600}
+                            height={400}
+                            className="rounded-xl object-cover w-full aspect-[3/2]"
+                            data-ai-hint={saasChurnImage3.imageHint}
+                        />
+                        <figcaption className="text-center text-sm text-muted-foreground mt-2">{saasChurnImage3.caption}</figcaption>
+                    </figure>
+                )}
+
                 <p className="mb-4">
                   Effective <strong>churn reduction</strong> in 2025 requires moving beyond reactive tactics to systematic, data-driven frameworks. The strategies outlined in this playbook—from predictive risk identification to customer-centric culture—represent the difference between constantly refilling a leaky bucket and building a resilient growth engine.
                 </p>
@@ -331,5 +333,3 @@ export default function BlogPostPage() {
     </main>
   );
 }
-
-    

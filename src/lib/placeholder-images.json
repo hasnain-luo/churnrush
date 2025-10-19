@@ -47,24 +47,24 @@
     },
     {
       "id": "blog-post-saas-churn-1",
-      "description": "A leaky bucket graphic with coins falling out, symbolizing SaaS churn and lost revenue, with a hand patching a hole.",
-      "imageUrl": "https://images.unsplash.com/photo-1635840420799-f75477b0b977?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxyZXZlbnVlJTIwbG9zc3xlbnwwfHx8fDE3NjA4NzkyMzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "revenue loss",
-      "caption": "Effective churn prevention transforms your business from a leaky bucket into a compounding growth engine."
+      "description": "Predictive analytics dashboard showing customer health scores and churn risk indicators with early warning signs",
+      "imageUrl": "/images/191025/saas-churn-risk-prediction-dashboard.webp",
+      "imageHint": "data dashboard",
+      "caption": "Predictive systems identify churn risk 30-60 days before cancellation, enabling proactive intervention"
     },
     {
       "id": "blog-post-saas-churn-2",
-      "description": "A customer journey map on a whiteboard showing key touchpoints for onboarding optimization to prevent early churn.",
-      "imageUrl": "https://images.unsplash.com/photo-1536825211030-094de935f680?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjdXN0b21lciUyMGpvdXJuZXl8ZW58MHx8fHwxNzYwODc5MjMxfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "customer journey",
-      "caption": "Optimizing the first 21 days of onboarding is critical, as it determines up to 80% of long-term customer retention."
+      "description": "Customer health scoring framework with green, yellow and red zones showing healthy, at-risk and critical customer segments",
+      "imageUrl": "/images/191025/customer-health-scoring-framework.webp",
+      "imageHint": "customer health",
+      "caption": "Health scoring systems reduce churn by 45% through targeted interventions based on quantified engagement metrics"
     },
     {
       "id": "blog-post-saas-churn-3",
-      "description": "A dashboard showing customer health scores segmented by color (green, yellow, red) for targeted retention efforts.",
-      "imageUrl": "https://images.unsplash.com/photo-1542744173-05336fcc7ad4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxkYXRhJTIwZGFzaGJvYXJkfGVufDB8fHx8MTc2MDg1ODA1Nnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "data dashboard",
-      "caption": "Data-driven segmentation allows for surgical retention efforts, focusing resources on at-risk accounts for maximum impact."
+      "description": "4-phase churn reduction implementation roadmap showing predictive scoring, onboarding optimization, personalized engagement and cross-functional teams",
+      "imageUrl": "/images/191025/churn-reduction-implementation-roadmap.webp",
+      "imageHint": "roadmap strategy",
+      "caption": "Systematic implementation transforms churn reduction from reactive to proactive, delivering sustainable results"
     }
   ]
 }
