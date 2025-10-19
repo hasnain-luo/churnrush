@@ -28,19 +28,43 @@
       "id": "blog-post-churn-meaning-1",
       "description": "Water tank analogy showing customer churn rate calculation and financial impact",
       "imageUrl": "/images/171025/churn-rate-concept-visualization.webp",
-      "imageHint": "business analysis"
+      "imageHint": "business analysis",
+      "caption": "Churn directly impacts revenue: A 5% monthly churn equals 46% annual customer loss"
     },
     {
       "id": "blog-post-churn-meaning-2",
       "description": "Step-by-step churn rate calculation formulas with example: customer churn, revenue churn, and net churn",
       "imageUrl": "/images/171025/churn-formula-breakdown-infographic.webp",
-      "imageHint": "formula calculation"
+      "imageHint": "formula calculation",
+      "caption": "Progressive complexity: From basic customer count to revenue-adjusted churn metrics"
     },
     {
       "id": "blog-post-churn-meaning-3",
       "description": "Industry churn rate benchmarks: SaaS 10%, E-commerce 15%, Telecom 20%, Financial 8%, Subscription 25% with healthy/danger zones",
       "imageUrl": "/images/171025/industry-churn-benchmark-comparison.webp",
-      "imageHint": "data dashboard"
+      "imageHint": "data dashboard",
+      "caption": "Industry benchmarks help contextualize your churn rate - SaaS requires different calculation than retail"
+    },
+    {
+      "id": "blog-post-saas-churn-1",
+      "description": "A leaky bucket graphic with coins falling out, symbolizing SaaS churn and lost revenue, with a hand patching a hole.",
+      "imageUrl": "https://images.unsplash.com/photo-1635840420799-f75477b0b977?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxyZXZlbnVlJTIwbG9zc3xlbnwwfHx8fDE3NjA4NzkyMzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "revenue loss",
+      "caption": "Effective churn prevention transforms your business from a leaky bucket into a compounding growth engine."
+    },
+    {
+      "id": "blog-post-saas-churn-2",
+      "description": "A customer journey map on a whiteboard showing key touchpoints for onboarding optimization to prevent early churn.",
+      "imageUrl": "https://images.unsplash.com/photo-1536825211030-094de935f680?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjdXN0b21lciUyMGpvdXJuZXl8ZW58MHx8fHwxNzYwODc5MjMxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "customer journey",
+      "caption": "Optimizing the first 21 days of onboarding is critical, as it determines up to 80% of long-term customer retention."
+    },
+    {
+      "id": "blog-post-saas-churn-3",
+      "description": "A dashboard showing customer health scores segmented by color (green, yellow, red) for targeted retention efforts.",
+      "imageUrl": "https://images.unsplash.com/photo-1542744173-05336fcc7ad4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxkYXRhJTIwZGFzaGJvYXJkfGVufDB8fHx8MTc2MDg1ODA1Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "data dashboard",
+      "caption": "Data-driven segmentation allows for surgical retention efforts, focusing resources on at-risk accounts for maximum impact."
     }
   ]
 }
