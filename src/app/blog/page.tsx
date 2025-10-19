@@ -19,16 +19,6 @@ const blogImage3 = PlaceHolderImages.find(p => p.id === 'blog-post-saas-churn-1'
 
 const blogPosts = [
     {
-        title: 'SaaS Churn Reduction 2025: Strategies That Actually Work',
-        description: 'From churn identification to retention: Your complete SaaS playbook for reducing subscriber churn and boosting lifetime value.',
-        href: '/blog/saas-churn-reduction-strategies',
-        author: 'Olivia Chen',
-        date: 'October 26, 2025',
-        readingTime: '11 min read',
-        imageUrl: blogImage3?.imageUrl || 'https://picsum.photos/seed/blog3/600/400',
-        imageHint: blogImage3?.imageHint || 'data analysis',
-    },
-    {
         title: 'Customer Retention Management: 2025 Growth Playbook',
         description: 'A complete guide to customer retention strategies, metrics, and programs to drive sustainable growth for your business in 2025 and beyond.',
         href: '/blog/customer-retention-management',
@@ -47,8 +37,18 @@ const blogPosts = [
         readingTime: '10 min read',
         imageUrl: blogImage2?.imageUrl || 'https://picsum.photos/seed/blog2/600/400',
         imageHint: blogImage2?.imageHint || 'business analysis',
+    },
+    {
+        title: 'SaaS Churn Reduction 2025: Strategies That Actually Work',
+        description: 'From churn identification to retention: Your complete SaaS playbook for reducing subscriber churn and boosting lifetime value.',
+        href: '/blog/saas-churn-reduction-strategies',
+        author: 'Olivia Chen',
+        date: 'October 26, 2025',
+        readingTime: '11 min read',
+        imageUrl: blogImage3?.imageUrl || 'https://picsum.photos/seed/blog3/600/400',
+        imageHint: blogImage3?.imageHint || 'data analysis',
     }
-].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+];
 
 export default function BlogPage() {
   return (
@@ -104,7 +104,3 @@ export default function BlogPage() {
     </main>
   );
 }
-
-    
-
-    
