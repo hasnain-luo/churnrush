@@ -43,7 +43,7 @@ const blogPosts = [
         description: 'From churn identification to retention: Your complete SaaS playbook for reducing subscriber churn and boosting lifetime value.',
         href: '/blog/saas-churn-reduction-strategies',
         author: 'Olivia Chen',
-        date: 'October 26, 2025',
+        date: 'October 19, 2025',
         readingTime: '11 min read',
         imageUrl: blogImage3?.imageUrl || 'https://picsum.photos/seed/blog3/600/400',
         imageHint: blogImage3?.imageHint || 'data analysis',

@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { Lightbulb, TrendingDown, Target, Zap } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'SaaS Churn Reduction 2025: Strategies That Actually Work',
@@ -28,7 +29,7 @@ export default function BlogPostPage() {
             <div className="text-sm text-muted-foreground pt-4 flex items-center gap-2">
                 <span>By Olivia Chen</span>
                 <span>&middot;</span>
-                <span>October 26, 2025</span>
+                <span>October 19, 2025</span>
                 <span>&middot;</span>
                 <span>11 min read</span>
             </div>
@@ -37,6 +38,24 @@ export default function BlogPostPage() {
             <p>
               In today&apos;s hyper-competitive SaaS landscape, where customer acquisition costs have risen 60% since 2020 (ProfitWell), <strong>churn reduction</strong> has become the ultimate profit lever. Yet 68% of SaaS companies still rely on reactive tactics rather than systematic <strong>churn prevention</strong> frameworks. This comprehensive playbook delivers the 2025 strategies top-performing SaaS companies use to <strong>reduce customer churn</strong> by up to 40% while increasing lifetime value by 3x.
             </p>
+
+            <div className="bg-secondary p-6 rounded-xl border border-border space-y-4">
+              <h3 className="font-headline text-xl font-semibold flex items-center gap-2"><Lightbulb className="text-primary h-6 w-6" /> Key Takeaways</h3>
+              <ul className="space-y-3 list-none pl-2">
+                <li className="flex items-start gap-3">
+                  <TrendingDown className="h-5 w-5 mt-1 text-primary shrink-0" />
+                  <span><strong>Proactive Prevention:</strong> Shift from reactive fixes to proactive churn prevention by identifying at-risk customers through usage data, health scores, and engagement metrics.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Zap className="h-5 w-5 mt-1 text-primary shrink-0" />
+                  <span><strong>Onboarding is Critical:</strong> The first 21 days determine 80% of long-term retention. Optimize onboarding to demonstrate value quickly and reduce early-stage churn.</span>
+                </li>
+                 <li className="flex items-start gap-3">
+                  <Target className="h-5 w-5 mt-1 text-primary shrink-0" />
+                  <span><strong>Data-Driven Strategies:</strong> Use segmentation, feedback loops, and advanced metrics like Net Revenue Retention (NRR) to create targeted, high-impact retention campaigns.</span>
+                </li>
+              </ul>
+            </div>
 
             <section>
               <h2 className="font-headline text-2xl mb-4 mt-4 font-semibold">Decoding Churn: What It Really Means for SaaS</h2>
@@ -312,3 +331,5 @@ export default function BlogPostPage() {
     </main>
   );
 }
+
+    

@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Lightbulb, TrendingUp, Handshake, Target } from 'lucide-react';
+import { Lightbulb, TrendingUp, Handshake, Target, BarChart, AlertTriangle } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Churn Meaning in Business: Calculate Customer Churn Like a Pro',
@@ -38,6 +38,24 @@ export default function BlogPostPage() {
               In today's hyper-competitive business landscape, understanding and managing customer churn has become the difference between sustainable growth and stagnation. For businesses across industries, churn rate calculation isn't just a metric—it's a strategic imperative that directly impacts revenue forecasting, resource allocation, and long-term viability. This comprehensive guide demystifies churn meaning in business, equipping you with precise calculation methods and actionable strategies to transform customer attrition into retention opportunities.
             </p>
 
+            <div className="bg-secondary p-6 rounded-xl border border-border space-y-4">
+              <h3 className="font-headline text-xl font-semibold flex items-center gap-2"><Lightbulb className="text-primary h-6 w-6" /> Key Takeaways</h3>
+              <ul className="space-y-3 list-none pl-2">
+                <li className="flex items-start gap-3">
+                  <TrendingUp className="h-5 w-5 mt-1 text-primary shrink-0" />
+                  <span><strong>Vital Metric:</strong> Churn isn't just lost customers; it's a critical health indicator. A 5% reduction in churn can increase profits by 25-95%.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <BarChart className="h-5 w-5 mt-1 text-primary shrink-0" />
+                  <span><strong>Calculation is Key:</strong> You can't manage what you don't measure. Use formulas for customer churn, revenue churn, and net churn for a complete picture.</span>
+                </li>
+                 <li className="flex items-start gap-3">
+                  <AlertTriangle className="h-5 w-5 mt-1 text-primary shrink-0" />
+                  <span><strong>Actionable Insights:</strong> Use churn data to identify at-risk segments, benchmark against industry standards, and implement proactive retention strategies before it's too late.</span>
+                </li>
+              </ul>
+            </div>
+
              <section>
                 <h2 className="font-headline text-2xl mb-4 mt-4 font-semibold">Decoding Churn: What It Really Means for Your Business</h2>
 
@@ -66,7 +84,7 @@ export default function BlogPostPage() {
                             className="rounded-xl object-cover w-full aspect-[3/2]"
                             data-ai-hint={churnMeaningImage1.imageHint}
                         />
-                        <figcaption className="text-center text-sm text-muted-foreground mt-2">Churn directly impacts revenue: A 5% monthly churn equals 46% annual customer loss</figcaption>
+                        <figcaption className="text-center text-sm text-muted-foreground mt-2">{churnMeaningImage1.caption}</figcaption>
                     </figure>
                 )}
 
@@ -128,7 +146,7 @@ export default function BlogPostPage() {
                             className="rounded-xl object-cover w-full aspect-[3/2]"
                             data-ai-hint={churnMeaningImage2.imageHint}
                         />
-                        <figcaption className="text-center text-sm text-muted-foreground mt-2">Progressive complexity: From basic customer count to revenue-adjusted churn metrics</figcaption>
+                        <figcaption className="text-center text-sm text-muted-foreground mt-2">{churnMeaningImage2.caption}</figcaption>
                     </figure>
                 )}
                 
@@ -222,7 +240,7 @@ export default function BlogPostPage() {
                             className="rounded-xl object-cover w-full aspect-[3/2]"
                             data-ai-hint={churnMeaningImage3.imageHint}
                         />
-                        <figcaption className="text-center text-sm text-muted-foreground mt-2">Industry benchmarks help contextualize your churn rate - SaaS requires different calculation than retail</figcaption>
+                        <figcaption className="text-center text-sm text-muted-foreground mt-2">{churnMeaningImage3.caption}</figcaption>
                     </figure>
                 )}
                 <h3 className="font-semibold text-xl mb-2">Building an Effective Churn Report: Key Metrics to Track</h3>
